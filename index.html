@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>Akshay Gadre</title>
+<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />`
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<style>
+body,html{
+	padding:0px;
+	margin:0px;
+	border:0px;
+	height:100%;
+	width:100%;
+	color:#FFF;
+	background-color:#300924;
+	font-family:Ubuntu;
+	font-size:2vmax;
+}
+#topBand{
+
+	position:absolute;
+	top:0%;
+	left:0%;
+	height:5%;
+	width:100%;
+	
+	background-color:#FFF;
+	color:#300924;
+
+}
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+#mainBand{
+	position:absolute;
+	top:5%;
+	left:0%;
+	height:85%;
+	width:100%;
+	overflow-y:auto;
+}
+#bottomBand1{
+	position:absolute;
+	top:90%;
+	left:0%;
+	height:10%;
+	width:100%;
+	
+}
+.option{cursor: pointer; cursor: hand;
+	position:absolute;
+	height:50%;
+	width:20%;
+}
+.l1{left:0%;}
+.l2{left:20%;}
+.l3{left:40%;}
+.l4{left:60%;}
+.l5{left:80%;}
+.t1{top:0%;}
+.t2{top:50%;}
+
+.textcenter1{position:absolute;left:0%;top:35%;text-align:center;width:100%;}
+.textcenter2{position:absolute;left:0%;top:2.5%;width:99%;margin:0.5%;}
+.optionbutton{
+	position:absolute;
+	left:0%;
+	top:0%;
+	width:10%;
+	background-color:#FFF;
+	color:#300924;
+}
+.optiontext{
+	position:absolute;
+	width:90%;
+	left:10%;
+	top:0%;
+}
+.sp1{
+	color:#f1f227;
+}
+.sp2{
+	color:#7fffd4;
+}
+.sp3{
+	color:#baf73c;
+}
+.sp4{
+	color:#00ff7f;
+}
+</style>
+</head>
+<body>
+<div id="topBand"><span class="alignleft">&nbsp;&nbsp;Last updated: 9.7.16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akshay&nbsp;&nbsp;Gadre's&nbsp;&nbsp;Website</span><span class="alignright">New Buffer&nbsp;&nbsp;</span></div>
+<div id="mainBand">
+		
+		
+</div>
+<div id="bottomBand1">
+	<div id="1" class="option l1 t1">
+		<div class="optionbutton">&nbsp;1</div>
+		<div class="optiontext">&nbsp;Home</div>
+	</div>
+	<div id="2" class="option l2 t1">
+		<div class="optionbutton">&nbsp;2</div>
+		<div class="optiontext">&nbsp;About Me</div>
+	</div>
+	<div id="3" class="option l3 t1">
+		<div class="optionbutton">&nbsp;3</div>
+		<div class="optiontext">&nbsp;Experience</div>
+	</div>
+	<div id="4" class="option l4 t1">
+		<div class="optionbutton">&nbsp;4</div>
+		<div class="optiontext">&nbsp;Projects</div>
+	</div>
+	<div id="5" class="option l5 t1">
+		<div class="optionbutton">&nbsp;5</div>
+		<div class="optiontext">&nbsp;Research</div>
+	</div>
+	<div id="6" class="option l1 t2">
+		<div class="optionbutton">&nbsp;6</div>
+		<div class="optiontext">&nbsp;Academics</div>
+	</div>
+	<div id="7" class="option l2 t2">
+		<div class="optionbutton">&nbsp;7</div>
+		<div class="optiontext">&nbsp;Resume</div>
+	</div>
+	<div id="8" class="option l3 t2">
+		<div class="optionbutton">&nbsp;8</div>
+		<div class="optiontext">&nbsp;Awards</div>
+	</div>
+	<div id="9" class="option l4 t2">
+		<div class="optionbutton">&nbsp;9</div>
+		<div class="optiontext">&nbsp;Skill-set</div>
+	</div>
+	<div id="0" class="option l5 t2">
+		<div class="optionbutton">&nbsp;0</div>
+		<div class="optiontext">&nbsp;Contact Me</div>
+	</div>
+</div>
+
+</body>
+<script>
+$('#1').on('click',function(){
+    $('#mainBand').html('<div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a Computer Science and Engineering undergraduate senior at IIT Madras</div>	</div>').show();
+});
+$('#2').on('click',function(){
+    $('#mainBand').html('<div class="textcenter2">		<center class="sp1">About me</center>		<p>I am <span class="sp2">Computer Science and Engineering</span> senior at <span class="sp2">IIT Madras</span>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p>		<p>I currently work at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I work on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">NLP</span>, <span class="sp4">Compilers</span>, <span class="sp4">Networks</span> and <span class="sp4">Programming Languages</span>. However, for now, I primarily work in the field of <span class="sp4">software-defined networking(SDN)</span> and <span class="sp4">network function virtualization(NFV)</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
+});
+$('#3').on('click',function(){
+    $('#mainBand').html('<div class="textcenter2">			<div><span class="sp2">Research Intern</span> - <span class="sp3">Prof. Arjun Guha</span> @ <span class="sp4">PLASMA Lab, University of Massachusetts, Amherst</span></div>			<ul>				<li>Performed research on software-defined network superoptimizers and proposed a new approach to centralized routing as a constraint satisfaction problem, which scaled to topologies as large as 8-pod fat trees.</li>				<li>Working with physical OpenStack cluster and OpenFlow switches to derive proof of concept of the planned algorithm.</li>				<li>Developing a robust tool to integrate the above algorithm into modern systems using OpenFloodlight and OpenStack.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Dr. Monojit Choudhury</span> @ <span class="sp4">Multilingual Systems Group, Microsoft Research India</span></div>			<ul>				<li>Studied state-of-the-art Machine Translation(MT) system evaluation metrics and developed a procedure to compare the performances of MT systems on code-mixed texts.</li>				<li>Developed features to tackle the problem of code-switching in Named Entity Recognition by making it language independent, and unsupervised.</li>				<li>Confirmed the usefulness of the above features in segregating named entities from other words and the dire need of new algorithms for machine translation of code-mixed text.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Mr. Sandeep Athavale</span> @ <span class="sp4">Human Centric Systems Lab, Tata Innovation Labs(TRDDC)</span></div>			<ul>				<li>Performed research in the area of game-based assessment of behavioral characteristics and nudging person\'s choices through gamification of real-life situation</li>				<li>Developed a web-based game for the project manager\'s behavior in the real-life and to extract valuable emotional and behavioral data to predict real life behavior. (Based on Computer Science and Psychology)</li>			</ul>		</div>').show();
+});
+</script>
+</html>

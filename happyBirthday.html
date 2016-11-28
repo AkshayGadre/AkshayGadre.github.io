@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WebVR Starter Kit - Panorama Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<style>
+		html,body{
+		color:#000;
+		}
+		</style>
+    </head>
+    <body>
+        <script src="https://povdocs.github.io/webvr-starter-kit/build/vr.js"></script>
+        <script type="text/javascript">
+		 (function () {
+           // VR.panorama('https://i.imgur.com/Rp4hJKX.jpg?1');
+
+            var container = VR.empty()
+                .moveTo(3, 2, 1)
+                .rotateY(-Math.PI / 4);
+
+            container.text({
+				wrap: 2,
+                text: 'Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.',
+                font: 'italic 30pt sans-serif',
+				fillStyle: 'aquamarine'
+            });
+
+            var container1 = VR.empty()
+                .moveTo(6, 2, 5)
+                .rotateY(-Math.PI / 2);
+
+            container1.text({
+				wrap: 2,
+                text: 'Nothing’s more fun than doing what people say you can’t do.',
+                font: 'italic 40pt sans-serif',
+				fillStyle: 'gold'
+            });
+			var container2 = VR.empty()
+                .moveTo(3, 2, 7)
+                .rotateY(-3*Math.PI / 4);
+
+            container2.text({
+				wrap: 2,
+                text: 'Happiness comes more easily when you feel good about yourself without feeling the need for anyone else’s approval.',
+                font: 'italic 40pt sans-serif',
+				fillStyle: 'Cyan'
+            });
+			var container3 = VR.empty()
+                .moveTo(0, 2, 9)
+                .rotateY(-Math.PI);
+
+            container3.text({
+				wrap: 2,
+                text: 'Set an example. Treat everyone with kindness and respect, even those who are rude to you – not because they are nice, but because you are.',
+                font: 'italic 40pt sans-serif',
+				fillStyle: 'Lime'
+            });
+			var container4 = VR.empty()
+                .moveTo(-3, 2, 1)
+                .rotateY(Math.PI / 4);
+
+            container4.text({
+				wrap: 2,
+                text: 'You can’t change how people treat you or what they say about you.  All you can do is change how you react and who you choose to be around.',
+                font: 'italic 40pt sans-serif',
+				fillStyle: 'Beige'
+            });
+			var container5 = VR.empty()
+                .moveTo(-6, 2, 7)
+                .rotateY(Math.PI / 2);
+
+            container5.text({
+				wrap: 2,
+                text: 'When other people treat you poorly, walk away, smile and keep being YOU.  Don’t ever let someone else’s bitterness change the person you are.',
+                font: 'italic 40pt sans-serif',
+				fillStyle: 'Magenta'
+            });
+			var container6 = VR.empty()
+                .moveTo(-3, 2, 9)
+                .rotateY(3*Math.PI / 4);
+
+            container6.text({
+				wrap: 2,
+                text: 'Your value doesn’t decrease based on someone’s inability to see your worth.  It’s their loss, not yours.',
+                font: 'italic 40pt sans-serif',
+				fillStyle: 'MediumSpringGreen'
+            });
+						
+            VR.text({
+                    wrap: 2,
+                    font: '40pt Times New Roman',
+                    textAlign: 'center',
+					fillStyle: 'chartreuse',
+                    text: 'Happy Birthday Gayathri!'
+					
+                })
+            .moveTo(0, 2, 0.5)
+            .rotateY(0 / 3);
+
+            
+
+           
+        }())
+        
+        </script>
+    </body>
+</html>

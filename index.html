@@ -3,7 +3,7 @@
 <title>Akshay Gadre</title>
 <link rel="shortcut icon" type="image/x-icon" href="icon.ico" />`
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
 <style>
 body,html{
 	padding:0px;
@@ -63,9 +63,10 @@ body,html{
 .l5{left:80%;}
 .t1{top:0%;}
 .t2{top:50%;}
-
+a{color:#00ff7f;}
 .textcenter1{position:absolute;left:0%;top:35%;text-align:center;width:100%;}
-.textcenter2{position:absolute;left:0%;top:2.5%;width:99%;margin:0.5%;}
+.textcenter2{position:absolute;left:0%;top:2.5%;width:99%;margin:0.5%;font-size:1.5vmax;}
+.textcenter0{position:absolute;left:0%;top:45%;text-align:center;width:100%;}
 .optionbutton{
 	position:absolute;
 	left:0%;
@@ -95,16 +96,13 @@ body,html{
 </style>
 </head>
 <body>
-<div id="topBand"><span class="alignleft">&nbsp;&nbsp;Last updated: 9.7.16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akshay&nbsp;&nbsp;Gadre's&nbsp;&nbsp;Website</span><span class="alignright">New Buffer&nbsp;&nbsp;</span></div>
+<div id="topBand"><span class="alignleft">&nbsp;&nbsp;Last updated: 12.5.16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akshay&nbsp;&nbsp;Gadre's&nbsp;&nbsp;Website</span><span class="alignright">New Buffer&nbsp;&nbsp;</span></div>
 <div id="mainBand">
-		
-		
+		<div class="textcenter1"><div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a Computer Science and Engineering undergraduate senior at IIT Madras</div>	</div>
 </div>
-<div id="bottomBand1">
-	<div id="1" class="option l1 t1">
-		<div class="optionbutton">&nbsp;1</div>
-		<div class="optiontext">&nbsp;Home</div>
-	</div>
+
+<div id="bottomBand1">	
+	<div id="1" class="option l1 t1">		<div class="optionbutton">&nbsp;1</div>		<div class="optiontext">&nbsp;Home</div>	</div>
 	<div id="2" class="option l2 t1">
 		<div class="optionbutton">&nbsp;2</div>
 		<div class="optiontext">&nbsp;About Me</div>
@@ -153,6 +151,27 @@ $('#2').on('click',function(){
 });
 $('#3').on('click',function(){
     $('#mainBand').html('<div class="textcenter2">			<div><span class="sp2">Research Intern</span> - <span class="sp3">Prof. Arjun Guha</span> @ <span class="sp4">PLASMA Lab, University of Massachusetts, Amherst</span></div>			<ul>				<li>Performed research on software-defined network superoptimizers and proposed a new approach to centralized routing as a constraint satisfaction problem, which scaled to topologies as large as 8-pod fat trees.</li>				<li>Working with physical OpenStack cluster and OpenFlow switches to derive proof of concept of the planned algorithm.</li>				<li>Developing a robust tool to integrate the above algorithm into modern systems using OpenFloodlight and OpenStack.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Dr. Monojit Choudhury</span> @ <span class="sp4">Multilingual Systems Group, Microsoft Research India</span></div>			<ul>				<li>Studied state-of-the-art Machine Translation(MT) system evaluation metrics and developed a procedure to compare the performances of MT systems on code-mixed texts.</li>				<li>Developed features to tackle the problem of code-switching in Named Entity Recognition by making it language independent, and unsupervised.</li>				<li>Confirmed the usefulness of the above features in segregating named entities from other words and the dire need of new algorithms for machine translation of code-mixed text.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Mr. Sandeep Athavale</span> @ <span class="sp4">Human Centric Systems Lab, Tata Innovation Labs(TRDDC)</span></div>			<ul>				<li>Performed research in the area of game-based assessment of behavioral characteristics and nudging person\'s choices through gamification of real-life situation</li>				<li>Developed a web-based game for the project manager\'s behavior in the real-life and to extract valuable emotional and behavioral data to predict real life behavior. (Based on Computer Science and Psychology)</li>			</ul>		</div>').show();
+});
+$('#4').on('click',function(){
+    $('#mainBand').html('<div class="textcenter2"><div><span class="sp2">Doppelgänger: a cache for approximate computing</span> - <span class="sp3">Parallel Computer Architecture</span> - <a href="mailto:agadre@cse.iitm.ac.in">Slides</a>, <a href="mailto:agadre@cse.iitm.ac.in">Report</a></div><ul>	<li>Implemented Doppelgänger which is a novel approach to reduce the area and energy usage of LLCs by introducing tolerance in the accuracy of the data made available. It reduces the amount of data that needs to be stored by trading off the accuracy of data made available to the user.</li>	</ul>	<div><span class="sp2">Virtual Cluster Embeddings for Software-Defined Networks</span> - <span class="sp3">Software Defined Networking</span> - <a href="mailto:agadre@cse.iitm.ac.in">Slides</a>, <a href="mailto:agadre@cse.iitm.ac.in">Report</a>, <a href="mailto:agadre@cse.iitm.ac.in">Video</a></div>	<ul>	<li>Developed a modular toolkit called “VirNet” to facilitate creation of physical topologies and implement virtualization. We developed an Embed Compiler and proposed a segmented architecture which allows you plug-in your own replacement modules and customize the virtualization.</li>	</ul>	<div><span class="sp2">Fractal Image Compression</span> - <span class="sp3">Memory Based Reasoning in AI</span> - <a href="mailto:agadre@cse.iitm.ac.in">Slides</a>, <a href="mailto:agadre@cse.iitm.ac.in">Report</a></div>	<ul>	<li>Fractal Image compression is an encoding technique which builds on local self-similarities within images.</li>	<li>We developed this algorithm and extended it to color images. We then even further researched into how does this algorithm change the membership on GAME compressed datasets upon clustering and studied the tradeoff between storage size and membership error.</li>	</ul>	<div><span class="sp2">OpenCV Video Augmented Reality</span> - <span class="sp3">OpenCV Club Project</span></div>	<ul>	<li>This project involved detection of a particular image and 3-dimensional superposition of a video over that image to give a video newspaper-like this phenomenon. This involved learning OpenCV and implementing the video processing libraries in C++ with latest technologies like SURF.</li>	</ul></div>').show();
+});
+$('#5').on('click',function(){
+    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('#6').on('click',function(){
+    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('#7').on('click',function(){
+	window.location = 'CV2Page.pdf';
+});
+$('#8').on('click',function(){
+    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('#9').on('click',function(){
+    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('#0').on('click',function(){
+    $('#mainBand').html('<div class="textcenter2">I am always interested to discuss new research problems in computer networks and in computer science in generally. Feel free to contact me for discussing such problems. Also feel free to challenge me for a game of Chess or Age of Empires 2, I would probably reply at a suitable time for the match up :D </div><div class="textcenter0">		<div>You can reach out to me at:</div><div>E-mail: <a href="mailto:agadre@cse.iitm.ac.in">agadre@cse.iitm.ac.in</a></div><div>LinkedIn:<a href="https://www.linkedin.com/in/gadreakshay"> Akshay Gadre</a></div><div>Phone: (+91)9884300493/8149587227</div><div>During working hours: Desk #1, DON Lab, Dept. of CSE, IIT Madras</div>	</div>').show();
 });
 </script>
 </html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>LaTeX4Web 1.4 OUTPUT</title>
+<style type="text/css">
+<!--
+ body {color: black;  background:"#FFCC99";  }
+ div.p { margin-top: 7pt;}
+ td div.comp { margin-top: -0.6ex; margin-bottom: -1ex;}
+ td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
+ td div.norm {line-height:normal;}
+ td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
+ td.sqrt {border-top:2 solid black;
+          border-left:2 solid black;
+          border-bottom:none;
+          border-right:none;}
+ table.sqrt {border-top:2 solid black;
+             border-left:2 solid black;
+             border-bottom:none;
+             border-right:none;}
+-->
+</style>
+</head>
+<body>
+<center>
+<h1>Day 1:Banker<font face=symbol>¢</font>s Algorithm</h1>
+<h2>Akshay Gadre </h2>
+<h2>January 1<sup>st</sup> 2017</h2>
+</center>
+<hr>
+<td nowrap align=center>
+   
+
+<p><a name="toc.1"><h1>1&nbsp;What is it?</h1>
+Banker<font face=symbol>¢</font>s algorithm is a algorithm for resource allocation designed for "THE" operating system by Edward Dijkstra(against conventional wisdom, it is not designed by someone named Banker) to avoid deadlocks and check before allocating resources to a process.
+
+The name derives from the fact that the same can be applied to the banking system where the resource would be cash and processes would be the customers.(Especially relevant in current situation of demonetization in India).
+
+<p><a name="toc.1.1"><h2>1.1&nbsp;Input:</h2>
+Let there be M resources and N processes. Let i denote the index of the resource and j denote the index of the process.
+
+It takes input:
+<ul>
+    
+<li> Amount of each resource each process could possibly request M<sub>ij</sub>
+    
+<li> Amount of each resource each process is currently holding C<sub>ij</sub>
+    
+<li> Amount of each resource the system currently has available A<sub>i</sub>
+</ul>
+Resource i can be allocated to process j iff requested amount R<sub>ij</sub> <font face=symbol>£</font>  A<sub>i</sub>.
+For the sake of better understanding, we can create a new matrix which contains the remaining resource request of each process per resource(N<sub>ij</sub>).
+
+<p><a name="toc.1.2"><h2>1.2&nbsp;Output:</h2>
+Whether the current state of the system is stable or not. That means whether there exists a path of sequential allocations and freeing of resources to satisfy the maximum requirement of each process and hence terminate.
+
+<p><a name="toc.2"><h1>2&nbsp;Approach</h1>
+<p><a name="toc.2.1"><h2>2.1&nbsp;Request:</h2>
+Usually processes request a set of resources from the operating system. Whenever a request is received, the processor must find the answer to 2 questions before serving the request.
+<ol>
+    
+<li> Does it have available resources to serve the request?
+    
+<li> Does the system transition into a stable state or not after serving this request?
+</ol>
+An allocation is done iff the answer is YES to both the questions above.
+The system will otherwise decide to drop, postpone or reschedule the request depending on the backoff policy of the operating system.
+<p><a name="toc.2.2"><h2>2.2&nbsp;Algorithm:</h2>
+<ol>
+    
+<li> See whether R<sub>ij</sub> <font face=symbol>£</font>  A<sub>i</sub>. If not, then "\textbfbackoff".
+    
+<li> Assuming the allocation is done, serially allocate and free the maximal resources of all process until all processes terminate or no process can be allocated the maximal resources.
+    
+<li> If all processes terminate then "\textbfAllocate R<sub>ij</sub>" else "\textbfBackoff".
+</ol>
+The above algorithm provides a strict guarantee of deadlock-safe allocations given an initial state.
+<p><a name="toc.3"><h1>3&nbsp;Limitations:</h1>
+Most of the current operating systems don<font face=symbol>¢</font>t know the set of maximum resources a process may request. Also the number of processes is dynamic which is difficult to handle using this algorithm. This algorithm gives a guarantee which can be relaxed to find heuristics which provide better resource utilization.
+
+<hr>
+
+</body>
+</html>

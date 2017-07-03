@@ -4,28 +4,30 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://akshaygadre.github.io/icon.ico" />`
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<style>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500,700|Source+Sans+Pro:200,300,400,600,700" rel="stylesheet"><style>
 body,html{
 	padding:0px;
 	margin:0px;
 	border:0px;
 	height:100%;
 	width:100%;
-	color:#FFF;
-	background-color:#300924;
+	color:#333;
+	background-color:#fff;
 	font-family:Ubuntu;
 	font-size:2vmax;
+    overflow: hidden;
 }
 #topBand{
 
 	position:absolute;
 	top:0%;
 	left:0%;
-	height:5%;
-	width:100%;
+	height:10%;
+	width:98%;
+    padding:1%;
 	
-	background-color:#FFF;
-	color:#300924;
+	background-color:#222;
+	color:#ddd;
 
 }
 .alignleft {
@@ -34,38 +36,53 @@ body,html{
 
 .alignright {
 	float: right;
+    font-size: 1vmax;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 300;
 }
 #mainBand{
 	position:absolute;
-	top:5%;
+	top:12%;
 	left:0%;
-	height:85%;
-	width:100%;
+    padding: 2%;
+    
+	height:84%;
+	width:96%;
 	overflow-y:auto;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+font-size: 1.75vmax;
 }
 #bottomBand1{
 	position:absolute;
-	top:90%;
-	left:0%;
+	top:0%;
+    padding:1%;
+    left:35vmax;
 	height:10%;
-	width:100%;
+	width:80%;
+    color:#ccc;
 	
 }
 .option{cursor: pointer; cursor: hand;
 	position:absolute;
 	height:50%;
 	width:20%;
+    font-size: 2vmax;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+    
 }
-.l1{left:0%;}
-.l2{left:20%;}
-.l3{left:40%;}
-.l4{left:60%;}
-.l5{left:80%;}
-.t1{top:0%;}
+.l1{left:0vmax;color:#fff;}
+.l2{left:10vmax;}
+.l3{left:22vmax;}
+.l4{left:34vmax;}
+.l5{left:45vmax;}
+.t1{top:3.2vmax}
 .t2{top:50%;}
-a{color:#00ff7f;}
+a{font-weight: 400;
+ color:#000;}
 .textcenter1{position:absolute;left:0%;top:35%;text-align:center;width:100%;}
-.textcenter2{position:absolute;left:0%;top:2.5%;width:99%;margin:0.5%;font-size:1.5vmax;}
+.textcenter2{position:absolute;left:0%;top:3vmax;width:95%;height:75%;padding:2.5%;font-size:1.5vmax;}
 .textcenter0{position:absolute;left:0%;top:45%;text-align:center;width:100%;}
 .optionbutton{
 	position:absolute;
@@ -81,62 +98,101 @@ a{color:#00ff7f;}
 	left:10%;
 	top:0%;
 }
+    .optiontype{cursor: pointer;
+        cursor: hand;
+    }
 .sp1{
-	color:#f1f227;
+	font-weight: 400;
 }
 .sp2{
-	color:#7fffd4;
+	font-weight: 400;
 }
 .sp3{
-	color:#baf73c;
+	font-weight: 400;
 }
 .sp4{
-	color:#00ff7f;
+	font-weight: 400;
 }
+    .myPic{
+        padding:0px;
+        border:0px;
+        margin:0px;
+        height:100%;
+        width:auto;
+        border-radius: 50%;
+        
+    }
+    .myName{
+        position:absolute;
+        top:1%;
+        left:14vh;
+        color:#fff;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+        font-size: 2.5vmax;
+    }
+    .myDescript{
+        position: absolute;
+        left:14vh;
+        top: 6.7vh;
+         white-space: pre;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+        font-size: 1.2vmax;
+        color:#999;
+    }
+    .mainTopBand1{
+        position: absolute;
+        top:2%;
+        left:0%;
+        width:100%;
+        background-color: #222;
+        height:3vmax;
+        color: #ffc;
+    }
+    .mainTopBand2{
+        position: absolute;
+        top:2%;
+        left:0%;
+        width:100%;
+        background-color: #222;
+        height:3vmax;
+        color: #cff;
+    }
+    .mainTopBand3{
+        position: absolute;
+        top:2%;
+        left:0%;
+        width:100%;
+        background-color: #222;
+        height:3vmax;
+        color: #fcf;
+    }
 </style>
 </head>
 <body>
-<div id="topBand"><span class="alignleft">&nbsp;&nbsp;Last updated: 12.5.16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akshay&nbsp;&nbsp;Gadre's&nbsp;&nbsp;Website</span><span class="alignright">New Buffer&nbsp;&nbsp;</span></div>
-<div id="mainBand">
-		<div class="textcenter1"><div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a Computer Science and Engineering undergraduate senior at IIT Madras</div>	</div>
+<div id="topBand"><span class="alignleft"> <img src="myPhoto.png" alt="Smiley face" class="myPic"><div class="myName">Akshay Gadre</div><div class="myDescript">Ph.D student @ Carnegie Mellon University
+Computer Scientist, Engineer and Researcher</div></span><span class="alignright small">Last updated: 3<sup>rd</sup> July 2017</span></div>
+<div id="mainBand"><div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>
+   <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>
 </div>
 
 <div id="bottomBand1">	
-	<div id="1" class="option l1 t1">		<div class="optionbutton">&nbsp;1</div>		<div class="optiontext">&nbsp;Home</div>	</div>
-	<div id="2" class="option l2 t1">
-		<div class="optionbutton">&nbsp;2</div>
+	<div id="1" class="option l1 t1">				<div class="optiontext">&nbsp;Home</div>	</div>
+	<div id="x2" class="option l2 t1">
+		
 		<div class="optiontext">&nbsp;About Me</div>
 	</div>
 	<div id="3" class="option l3 t1">
-		<div class="optionbutton">&nbsp;3</div>
-		<div class="optiontext">&nbsp;Experience</div>
+		
+		<div class="optiontext">&nbsp;My Work</div>
 	</div>
 	<div id="4" class="option l4 t1">
-		<div class="optionbutton">&nbsp;4</div>
-		<div class="optiontext">&nbsp;Projects</div>
-	</div>
-	<div id="5" class="option l5 t1">
-		<div class="optionbutton">&nbsp;5</div>
-		<div class="optiontext">&nbsp;Research</div>
-	</div>
-	<div id="6" class="option l1 t2">
-		<div class="optionbutton">&nbsp;6</div>
-		<div class="optiontext">&nbsp;Academics</div>
-	</div>
-	<div id="7" class="option l2 t2">
-		<div class="optionbutton">&nbsp;7</div>
-		<div class="optiontext">&nbsp;Resume</div>
-	</div>
-	<div id="8" class="option l3 t2">
-		<div class="optionbutton">&nbsp;8</div>
-		<div class="optiontext">&nbsp;Awards</div>
-	</div>
-	<div id="9" class="option l4 t2">
-		<div class="optionbutton">&nbsp;9</div>
+		
 		<div class="optiontext">&nbsp;Skill-set</div>
 	</div>
-	<div id="0" class="option l5 t2">
-		<div class="optionbutton">&nbsp;0</div>
+	<div id="5" class="option l5 t1">
+		
 		<div class="optiontext">&nbsp;Contact Me</div>
 	</div>
 </div>
@@ -144,34 +200,44 @@ a{color:#00ff7f;}
 </body>
 <script>
 $('#1').on('click',function(){
-    $('#mainBand').html('<div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a Computer Science and Engineering undergraduate senior at IIT Madras</div>	</div>').show();
+    $('#mainBand').html('<div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a first year Ph.D student in Electrical and Computer Engineering at Carnegie Mellon University.</div><div> I completed my undergraduate studies at Department of  Computer Science and Engineering, IIT Madras</div>	</div>').show();
 });
-$('#2').on('click',function(){
-    $('#mainBand').html('<div class="textcenter2">		<center class="sp1">About me</center>		<p>I am <span class="sp2">Computer Science and Engineering</span> senior at <span class="sp2">IIT Madras</span>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p>		<p>I currently work at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I work on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">NLP</span>, <span class="sp4">Compilers</span>, <span class="sp4">Networks</span> and <span class="sp4">Programming Languages</span>. However, for now, I primarily work in the field of <span class="sp4">software-defined networking(SDN)</span> and <span class="sp4">network function virtualization(NFV)</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
+    
+$('*').on('click','#x2',function(){
+    $('#mainBand').html('    <div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div>    <div class="textcenter2">		<p>I am a first year Ph.D student in <span class="sp2">Electrical and Computer Engineering</span> at <span class="sp2">Carnegie Mellon University</span>. I have previously completed my undergraduate at <span class="sp2">Department of Computer Science and Engineering</span> at <span class="sp2">IIT Madras</span>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p>		<p>I previously worked at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I worked on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">NLP</span>, <span class="sp4">Compilers</span>, <span class="sp4">Networks</span> and <span class="sp4">Programming Languages</span>. However, for now, I primarily work in the field of <span class="sp4">software-defined networking(SDN)</span> and <span class="sp4">network function virtualization(NFV)</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
 });
+$('*').on('click','#x2x',function(){
+    $('#mainBand').html('    <div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div>    <div class="textcenter2">		<p>I am a first year Ph.D student in <span class="sp2">Electrical and Computer Engineering</span> at <span class="sp2">Carnegie Mellon University</span>. I have previously completed my undergraduate at <span class="sp2">Department of Computer Science and Engineering</span> at <span class="sp2">IIT Madras</span>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p>		<p>I previously worked at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I worked on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">NLP</span>, <span class="sp4">Compilers</span>, <span class="sp4">Networks</span> and <span class="sp4">Programming Languages</span>. However, for now, I primarily work in the field of <span class="sp4">software-defined networking(SDN)</span> and <span class="sp4">network function virtualization(NFV)</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
+});
+    
 $('#3').on('click',function(){
-    $('#mainBand').html('<div class="textcenter2">			<div><span class="sp2">Research Intern</span> - <span class="sp3">Prof. Arjun Guha</span> @ <span class="sp4">PLASMA Lab, University of Massachusetts, Amherst</span></div>			<ul>				<li>Performed research on software-defined network superoptimizers and proposed a new approach to centralized routing as a constraint satisfaction problem, which scaled to topologies as large as 8-pod fat trees.</li>				<li>Working with physical OpenStack cluster and OpenFlow switches to derive proof of concept of the planned algorithm.</li>				<li>Developing a robust tool to integrate the above algorithm into modern systems using OpenFloodlight and OpenStack.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Dr. Monojit Choudhury</span> @ <span class="sp4">Multilingual Systems Group, Microsoft Research India</span></div>			<ul>				<li>Studied state-of-the-art Machine Translation(MT) system evaluation metrics and developed a procedure to compare the performances of MT systems on code-mixed texts.</li>				<li>Developed features to tackle the problem of code-switching in Named Entity Recognition by making it language independent, and unsupervised.</li>				<li>Confirmed the usefulness of the above features in segregating named entities from other words and the dire need of new algorithms for machine translation of code-mixed text.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Mr. Sandeep Athavale</span> @ <span class="sp4">Human Centric Systems Lab, Tata Innovation Labs(TRDDC)</span></div>			<ul>				<li>Performed research in the area of game-based assessment of behavioral characteristics and nudging person\'s choices through gamification of real-life situation</li>				<li>Developed a web-based game for the project manager\'s behavior in the real-life and to extract valuable emotional and behavioral data to predict real life behavior. (Based on Computer Science and Psychology)</li>			</ul>		</div>').show();
+    $('#mainBand').html(' <div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>   <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
 });
-$('#4').on('click',function(){
-    $('#mainBand').html('<div class="textcenter2"><div><span class="sp2">Doppelgänger: a cache for approximate computing</span> - <span class="sp3">Parallel Computer Architecture</span> - <a href="./PCA_Project_Slides.pdf">Slides</a>, <a href="./PCA_Project_Report.pdf">Report</a></div><ul>	<li>Implemented Doppelgänger which is a novel approach to reduce the area and energy usage of LLCs by introducing tolerance in the accuracy of the data made available. It reduces the amount of data that needs to be stored by trading off the accuracy of data made available to the user.</li>	</ul>	<div><span class="sp2">Virtual Cluster Embeddings for Software-Defined Networks</span> - <span class="sp3">Software Defined Networking</span> - <a href="./SDN_Project_Slides.pdf">Slides</a>, <a href="./SDN_Project_Report.pdf">Report</a>, <a href="./SDN_Project_Video.compressed.mp4">Video</a></div>	<ul>	<li>Developed a modular toolkit called “VirNet” to facilitate creation of physical topologies and implement virtualization. We developed an Embed Compiler and proposed a segmented architecture which allows you plug-in your own replacement modules and customize the virtualization.</li>	</ul>	<div><span class="sp2">Fractal Image Compression</span> - <span class="sp3">Memory Based Reasoning in AI</span> - <a href="./MBRAI_Project_Report.pdf">Slides</a>, <a href="./MBRAI_Project_Report.pdf">Report</a></div>	<ul>	<li>Fractal Image compression is an encoding technique which builds on local self-similarities within images.</li>	<li>We developed this algorithm and extended it to color images. We then even further researched into how does this algorithm change the membership on GAME compressed datasets upon clustering and studied the tradeoff between storage size and membership error.</li>	</ul>	<div><span class="sp2">OpenCV Video Augmented Reality</span> - <span class="sp3">OpenCV Club Project</span></div>	<ul>	<li>This project involved detection of a particular image and 3-dimensional superposition of a video over that image to give a video newspaper-like this phenomenon. This involved learning OpenCV and implementing the video processing libraries in C++ with latest technologies like SURF.</li>	</ul></div>').show();
+$('*').on('click','#x3',function(){
+    $('#mainBand').html(' <div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>   <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('*').on('click','#x4',function(){
+    $('#mainBand').html('<div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>    <div class="textcenter2"><div><span class="sp2">Doppelgänger: a cache for approximate computing</span> - <span class="sp3">Parallel Computer Architecture</span> - <a href="./PCA_Project_Slides.pdf">Slides</a>, <a href="./PCA_Project_Report.pdf">Report</a></div><ul>	<li>Implemented Doppelgänger which is a novel approach to reduce the area and energy usage of LLCs by introducing tolerance in the accuracy of the data made available. It reduces the amount of data that needs to be stored by trading off the accuracy of data made available to the user.</li>	</ul>	<div><span class="sp2">Virtual Cluster Embeddings for Software-Defined Networks</span> - <span class="sp3">Software Defined Networking</span> - <a href="./SDN_Project_Slides.pdf">Slides</a>, <a href="./SDN_Project_Report.pdf">Report</a>, <a href="./SDN_Project_Video.compressed.mp4">Video</a></div>	<ul>	<li>Developed a modular toolkit called “VirNet” to facilitate creation of physical topologies and implement virtualization. We developed an Embed Compiler and proposed a segmented architecture which allows you plug-in your own replacement modules and customize the virtualization.</li>	</ul>	<div><span class="sp2">Fractal Image Compression</span> - <span class="sp3">Memory Based Reasoning in AI</span> - <a href="./MBRAI_Project_Report.pdf">Slides</a>, <a href="./MBRAI_Project_Report.pdf">Report</a></div>	<ul>	<li>Fractal Image compression is an encoding technique which builds on local self-similarities within images.</li>	<li>We developed this algorithm and extended it to color images. We then even further researched into how does this algorithm change the membership on GAME compressed datasets upon clustering and studied the tradeoff between storage size and membership error.</li>	</ul>	<div><span class="sp2">OpenCV Video Augmented Reality</span> - <span class="sp3">OpenCV Club Project</span></div>	<ul>	<li>This project involved detection of a particular image and 3-dimensional superposition of a video over that image to give a video newspaper-like this phenomenon. This involved learning OpenCV and implementing the video processing libraries in C++ with latest technologies like SURF.</li>	</ul></div>').show();
 });
 $('#5').on('click',function(){
     $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
 });
-$('#6').on('click',function(){
-    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+
+    
+$('*').on('click','#x6',function(){
+    $('#mainBand').html(' <div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>    <div class="textcenter2">			<div><span class="sp2">Research Intern</span> - <span class="sp3">Prof. Arjun Guha</span> @ <span class="sp4">PLASMA Lab, University of Massachusetts, Amherst</span></div>			<ul>				<li>Performed research on software-defined network superoptimizers and proposed a new approach to centralized routing as a constraint satisfaction problem, which scaled to topologies as large as 8-pod fat trees.</li>				<li>Working with physical OpenStack cluster and OpenFlow switches to derive proof of concept of the planned algorithm.</li>				<li>Developing a robust tool to integrate the above algorithm into modern systems using OpenFloodlight and OpenStack.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Dr. Monojit Choudhury</span> @ <span class="sp4">Multilingual Systems Group, Microsoft Research India</span></div>			<ul>				<li>Studied state-of-the-art Machine Translation(MT) system evaluation metrics and developed a procedure to compare the performances of MT systems on code-mixed texts.</li>				<li>Developed features to tackle the problem of code-switching in Named Entity Recognition by making it language independent, and unsupervised.</li>				<li>Confirmed the usefulness of the above features in segregating named entities from other words and the dire need of new algorithms for machine translation of code-mixed text.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Mr. Sandeep Athavale</span> @ <span class="sp4">Human Centric Systems Lab, Tata Innovation Labs(TRDDC)</span></div>			<ul>				<li>Performed research in the area of game-based assessment of behavioral characteristics and nudging person\'s choices through gamification of real-life situation</li>				<li>Developed a web-based game for the project manager\'s behavior in the real-life and to extract valuable emotional and behavioral data to predict real life behavior. (Based on Computer Science and Psychology)</li>			</ul>		</div>').show();
 });
-$('#7').on('click',function(){
+$('*').on('click','#7',function(){
 	window.location = 'CV2Page.pdf';
 });
-$('#8').on('click',function(){
-    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+$('*').on('click','#x8',function(){
+    $('#mainBand').html('<div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div> <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
 });
 $('#9').on('click',function(){
     $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
 });
-$('#0').on('click',function(){
-    $('#mainBand').html('<div class="textcenter2">I am always interested to discuss new research problems in computer networks and in computer science in generally. Feel free to contact me for discussing such problems. Also feel free to challenge me for a game of Chess or Age of Empires 2, I would probably reply at a suitable time for the match up :D </div><div class="textcenter0">		<div>You can reach out to me at:</div><div>E-mail: <a href="mailto:agadre@cse.iitm.ac.in">agadre@cse.iitm.ac.in</a></div><div>LinkedIn:<a href="https://www.linkedin.com/in/gadreakshay"> Akshay Gadre</a></div><div>Phone: (+91)9884300493/8149587227</div><div>During working hours: Desk #1, DON Lab, Dept. of CSE, IIT Madras</div>	</div>').show();
+$('#5').on('click',function(){
+    $('#mainBand').html('<div class="textcenter2">I am always interested to discuss new research problems in computer networks and in computer science in generally. Feel free to contact me for discussing such problems. Also feel free to challenge me for a game of Chess or Age of Empires 2, I would probably reply at a suitable time for the match up :D </div><div class="textcenter0">		<div>You can reach out to me at:</div><div>E-mail: <a href="mailto:agadre@andrew.cmu.edu">agadre@andrew.cmu.edu</a></div><div>LinkedIn: <a href="https://www.linkedin.com/in/gadreakshay">Akshay Gadre</a></div><div>Phone: (+91)9884300493/8149587227</div><div>During working hours: Desk #1, DON Lab, Dept. of CSE, IIT Madras</div>	</div>').show();
 });
 </script>
 </html>

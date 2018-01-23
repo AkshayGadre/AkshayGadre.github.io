@@ -25,7 +25,7 @@ body,html{
 	height:10%;
 	width:98%;
     padding:1%;
-	
+
 	background-color:#222;
 	color:#ddd;
 
@@ -45,7 +45,7 @@ body,html{
 	top:12%;
 	left:0%;
     padding: 2%;
-    
+
 	height:84%;
 	width:96%;
 	overflow-y:auto;
@@ -61,7 +61,7 @@ font-size: 1.75vmax;
 	height:10%;
 	width:80%;
     color:#ccc;
-	
+
 }
 .option{cursor: pointer; cursor: hand;
 	position:absolute;
@@ -70,7 +70,7 @@ font-size: 1.75vmax;
     font-size: 2vmax;
     font-weight: 300;
     font-family: 'Open Sans',sans-serif;
-    
+
 }
 .l1{left:0vmax;color:#fff;}
 .l2{left:10vmax;}
@@ -120,7 +120,7 @@ a{font-weight: 400;
         height:100%;
         width:auto;
         border-radius: 50%;
-        
+
     }
     .myName{
         position:absolute;
@@ -172,26 +172,26 @@ a{font-weight: 400;
 </head>
 <body>
 <div id="topBand"><span class="alignleft"> <img src="./myPhoto.png" alt="Smiley face" class="myPic"><div class="myName">Akshay Gadre</div><div class="myDescript">Ph.D student @ Carnegie Mellon University
-Computer Scientist, Engineer and Researcher</div></span><span class="alignright small">Last updated: 3<sup>rd</sup> July 2017</span></div>
-<div id="mainBand"><div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a first year Ph.D student in Electrical and Computer Engineering at Carnegie Mellon University.</div><div> I completed my undergraduate studies at Department of  Computer Science and Engineering, IIT Madras</div>	</div>
-</div>
+Computer Scientist, Engineer and Researcher</div></span><span class="alignright small">Last updated: 23<sup>rd</sup> Jan 2018</span></div>
+<div id="mainBand">
+<div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a first year <span class="sp1">Ph.D student</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">Carnegie Mellon University</span>. I currently research on enhancing the <span class="sp1">quality</span> and <span class="sp1">utility</span> of <span class="sp1">LP-WAN networks</span> for various applications in day-to-day life at <a href="www.witechlab.com">WiTech Lab</a> with Prof. <a href="http://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>.</div><br /><div> I have prior research experience in Software-defined Networks and Network Function Virtualization<br /> with an internship at Microsoft Research in Natural Language Processing.<br /> I completed my undergraduate studies at Department of  Computer Science and Engineering, IIT Madras</div>	</div></div>
 
-<div id="bottomBand1">	
+<div id="bottomBand1">
 	<div id="1" class="option l1 t1">				<div class="optiontext">&nbsp;Home</div>	</div>
 	<div id="x2" class="option l2 t1">
-		
+
 		<div class="optiontext">&nbsp;About Me</div>
 	</div>
 	<div id="3" class="option l3 t1">
-		
+
 		<div class="optiontext">&nbsp;My Work</div>
 	</div>
 	<div id="4" class="option l4 t1">
-		
+
 		<div class="optiontext">&nbsp;Skill-set</div>
 	</div>
 	<div id="5" class="option l5 t1">
-		
+
 		<div class="optiontext">&nbsp;Contact Me</div>
 	</div>
 </div>
@@ -199,16 +199,16 @@ Computer Scientist, Engineer and Researcher</div></span><span class="alignright 
 </body>
 <script>
 $('#1').on('click',function(){
-    $('#mainBand').html('<div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a first year Ph.D student in Electrical and Computer Engineering at Carnegie Mellon University.</div><div> I completed my undergraduate studies at Department of  Computer Science and Engineering, IIT Madras</div>	</div>').show();
+    $('#mainBand').html('<div class="textcenter1">		<div>Hi, I am <span class="sp1">Akshay Gadre</span></div>		<div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>		<div>&nbsp;</div>		<div>I am currently a first year <span class="sp1">Ph.D student</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">Carnegie Mellon University</span>. I currently research on enhancing the <span class="sp1">quality</span> and <span class="sp1">utility</span> of <span class="sp1">LP-WAN networks</span> for various applications in day-to-day life at <a href="www.witechlab.com">WiTech Lab</a> with Prof. <a href="http://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>.</div><br /><div> I have prior research experience in Software-defined Networks and Network Function Virtualization<br /> with an internship at Microsoft Research in Natural Language Processing.<br /> I completed my undergraduate studies at Department of  Computer Science and Engineering, IIT Madras</div>	</div>').show();
 });
-    
+
 $('*').on('click','#x2',function(){
-    $('#mainBand').html('    <div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div>    <div class="textcenter2">		<p>I am a first year Ph.D student in <span class="sp2">Electrical and Computer Engineering</span> at <span class="sp2">Carnegie Mellon University</span>. I have previously completed my undergraduate at <span class="sp2">Department of Computer Science and Engineering</span> at <span class="sp2">IIT Madras</span>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p>		<p>I previously worked at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I worked on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">NLP</span>, <span class="sp4">Compilers</span>, <span class="sp4">Networks</span> and <span class="sp4">Programming Languages</span>. However, for now, I primarily work in the field of <span class="sp4">software-defined networking(SDN)</span> and <span class="sp4">network function virtualization(NFV)</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
+    $('#mainBand').html('    <div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div>    <div class="textcenter2">		<p>I am a first year Ph.D student in <span class="sp2">Electrical and Computer Engineering</span> at <span class="sp2">Carnegie Mellon University</span>. I currently research on enhancing the <span class="sp1">quality</span> and <span class="sp1">utility</span> of <span class="sp1">LP-WAN networks</span> for various applications in day-to-day life at <a href="www.witechlab.com">WiTech Lab</a> with Prof. <a href="http://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p><p> I have previously completed my undergraduate at <span class="sp2">Department of Computer Science and Engineering</span> at <span class="sp2">IIT Madras</span>. I worked at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I worked on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">Wireless Communications</span>, <span class="sp4">Deep Learning for IoT security</span>, <span class="sp4">RF Sensor Networks</span> and <span class="sp4">Computer Networks</span>  in general. However, for now, I primarily work in the field of <span class="sp4">Wireless Communications</span> and <span class="sp4">LPWAN Sensors</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
 });
 $('*').on('click','#x2x',function(){
-    $('#mainBand').html('    <div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div>    <div class="textcenter2">		<p>I am a first year Ph.D student in <span class="sp2">Electrical and Computer Engineering</span> at <span class="sp2">Carnegie Mellon University</span>. I have previously completed my undergraduate at <span class="sp2">Department of Computer Science and Engineering</span> at <span class="sp2">IIT Madras</span>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p>		<p>I previously worked at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I worked on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">NLP</span>, <span class="sp4">Compilers</span>, <span class="sp4">Networks</span> and <span class="sp4">Programming Languages</span>. However, for now, I primarily work in the field of <span class="sp4">software-defined networking(SDN)</span> and <span class="sp4">network function virtualization(NFV)</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
+    $('#mainBand').html('    <div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div>    <div class="textcenter2">		<p>I am a first year Ph.D student in <span class="sp2">Electrical and Computer Engineering</span> at <span class="sp2">Carnegie Mellon University</span>. I currently research on enhancing the <span class="sp1">quality</span> and <span class="sp1">utility</span> of <span class="sp1">LP-WAN networks</span> for various applications in day-to-day life at <a href="www.witechlab.com">WiTech Lab</a> with Prof. <a href="http://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>. I love to engage in interesting discussions about difficult problems and work towards new ideas to tackle them.</p><p> I have previously completed my undergraduate at <span class="sp2">Department of Computer Science and Engineering</span> at <span class="sp2">IIT Madras</span>. I worked at the <span class="sp3">Indic Computing and Communication Systems Lab</span> a.k.a <span class="sp3">DON Lab</span> with <span class="sp3">Prof. Krishna Sivalingam</span>.		At this lab, I worked on designing new solutions to the <span class="sp3">virtual network function(VNF) placement problem</span> and implementing them on the state-of-the-art software-defined switches.		</p>		<p>My areas of interest include <span class="sp4">Wireless Communications</span>, <span class="sp4">Deep Learning for IoT security</span>, <span class="sp4">RF Sensor Networks</span> and <span class="sp4">Computer Networks</span>  in general. However, for now, I primarily work in the field of <span class="sp4">Wireless Communications</span> and <span class="sp4">LPWAN Sensors</span>. I have developed numerous microprojects and done multiple research internships and am always ready to learn new things.</p>		<p>I am also a arduous computer gamer, especially Age of Empires 2, and play soccer, table tennis and chess as hobbies. I have also learnt violin for two and half years.</p>		</div>').show();
 });
-    
+
 $('#3').on('click',function(){
     $('#mainBand').html(' <div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>   <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
 });
@@ -222,7 +222,7 @@ $('#5').on('click',function(){
     $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
 });
 
-    
+
 $('*').on('click','#x6',function(){
     $('#mainBand').html(' <div class="mainTopBand2"><center> <span id="x3" class="optiontype">Research</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="x4" class="optiontype">Projects</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x6" class="optiontype">Experience</span></center></div>    <div class="textcenter2">			<div><span class="sp2">Research Intern</span> - <span class="sp3">Prof. Arjun Guha</span> @ <span class="sp4">PLASMA Lab, University of Massachusetts, Amherst</span></div>			<ul>				<li>Performed research on software-defined network superoptimizers and proposed a new approach to centralized routing as a constraint satisfaction problem, which scaled to topologies as large as 8-pod fat trees.</li>				<li>Working with physical OpenStack cluster and OpenFlow switches to derive proof of concept of the planned algorithm.</li>				<li>Developing a robust tool to integrate the above algorithm into modern systems using OpenFloodlight and OpenStack.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Dr. Monojit Choudhury</span> @ <span class="sp4">Multilingual Systems Group, Microsoft Research India</span></div>			<ul>				<li>Studied state-of-the-art Machine Translation(MT) system evaluation metrics and developed a procedure to compare the performances of MT systems on code-mixed texts.</li>				<li>Developed features to tackle the problem of code-switching in Named Entity Recognition by making it language independent, and unsupervised.</li>				<li>Confirmed the usefulness of the above features in segregating named entities from other words and the dire need of new algorithms for machine translation of code-mixed text.</li>			</ul>			<div><span class="sp2">Research Intern</span> - <span class="sp3">Mr. Sandeep Athavale</span> @ <span class="sp4">Human Centric Systems Lab, Tata Innovation Labs(TRDDC)</span></div>			<ul>				<li>Performed research in the area of game-based assessment of behavioral characteristics and nudging person\'s choices through gamification of real-life situation</li>				<li>Developed a web-based game for the project manager\'s behavior in the real-life and to extract valuable emotional and behavioral data to predict real life behavior. (Based on Computer Science and Psychology)</li>			</ul>		</div>').show();
 });

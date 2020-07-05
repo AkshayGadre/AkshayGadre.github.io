@@ -1,0 +1,19 @@
+<div class="textcenter2">
+<div><span class="sp2">Research Intern</span> - <span class="sp3">Prof. Arjun Guha</span> @ <span class="sp4">PLASMA Lab, University of Massachusetts, Amherst</span></div>
+  <ul>
+    <li>Performed research on software-defined network superoptimizers and proposed a new approach to centralized routing as a constraint satisfaction problem, which scaled to topologies as large as 8-pod fat trees.</li>
+    <li>Working with physical OpenStack cluster and OpenFlow switches to derive proof of concept of the planned algorithm.</li>
+    <li>Developing a robust tool to integrate the above algorithm into modern systems using OpenFloodlight and OpenStack.</li>
+  </ul>
+<div><span class="sp2">Research Intern</span> - <span class="sp3">Dr. Monojit Choudhury</span> @ <span class="sp4">Multilingual Systems Group, Microsoft Research India</span></div>
+  <ul>
+    <li>Studied state-of-the-art Machine Translation(MT) system evaluation metrics and developed a procedure to compare the performances of MT systems on code-mixed texts.</li>
+    <li>Developed features to tackle the problem of code-switching in Named Entity Recognition by making it language independent, and unsupervised.</li>
+    <li>Confirmed the usefulness of the above features in segregating named entities from other words and the dire need of new algorithms for machine translation of code-mixed text.</li>
+  </ul>
+<div><span class="sp2">Research Intern</span> - <span class="sp3">Mr. Sandeep Athavale</span> @ <span class="sp4">Human Centric Systems Lab, Tata Innovation Labs(TRDDC)</span></div>
+  <ul>
+    <li>Performed research in the area of game-based assessment of behavioral characteristics and nudging person\'s choices through gamification of real-life situation</li>
+    <li>Developed a web-based game for the project manager\'s behavior in the real-life and to extract valuable emotional and behavioral data to predict real life behavior. (Based on Computer Science and Psychology)</li>
+  </ul>
+</div>

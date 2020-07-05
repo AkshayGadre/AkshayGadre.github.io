@@ -1,0 +1,187 @@
+body,html{
+	padding:0px;
+	margin:0px;
+	border:0px;
+	height:100%;
+	width:100%;
+	color:#333;
+	background-color:#fff;
+	font-family:Ubuntu;
+	font-size:1.25vmax;
+    overflow: hidden;
+}
+#topBand{
+
+	position:absolute;
+	top:0%;
+	left:0%;
+	height:10%;
+	width:98%;
+    padding:1%;
+
+	background-color:#222;
+	color:#ddd;
+
+}
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+    font-size: 1vmax;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 300;
+}
+#mainBand{
+	position:absolute;
+	top:12%;
+	left:0%;
+    padding: 2%;
+
+	height:84%;
+	width:96%;
+	overflow-y:auto;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+font-size: 1.25vmax;
+}
+#bottomBand1{
+	position:absolute;
+	top:0%;
+    padding:1%;
+    left:35vmax;
+	height:10%;
+	width:80%;
+    color:#ccc;
+
+}
+.option{cursor: pointer; cursor: hand;
+	position:absolute;
+	height:50%;
+	width:20%;
+    font-size: 1.5vmax;
+    font-weight: 300;
+    font-family: 'Open Sans',sans-serif;
+
+}
+.l1{left:0vmax;color:#fff;}
+.l2{left:10vmax;}
+.l3{left:22vmax;}
+.l4{left:34vmax;}
+.l5{left:45vmax;}
+.t1{top:3.2vmax}
+.t2{top:50%;}
+a{font-weight: 400;
+ color:#000;}
+.textcenter1{position:absolute;left:0%;top:35%;text-align:center;width:100%;}
+.textleft1{position:absolute;left:2%;top:15%;text-align:center;width:56%;}
+.textright1{position:absolute;left:62%;top:7%;text-align:left;width:35%;}
+.publication{text-align:left;padding:1.5%;width:95%;}
+.underliner{text-decoration: underline;}
+.underliner:hover{ cursor: pointer; }
+.textcenter2{position:absolute;left:0%;top:1vmax;width:95%;height:75%;padding:2.5%;font-size:1.25vmax;}
+.textcenter0{position:absolute;left:0%;top:45%;text-align:center;width:100%;}
+.optionbutton{
+	position:absolute;
+	left:0%;
+	top:0%;
+	width:10%;
+	background-color:#FFF;
+	color:#300924;
+}
+.optiontext{
+	position:absolute;
+	width:90%;
+	left:10%;
+	top:0%;
+}
+    .optiontype{cursor: pointer;
+        cursor: hand;
+    }
+.sp1{
+	font-weight: 400;
+}
+.spRed{
+	font-weight: 400;
+	color:#FF0000;
+}
+.spBlue{
+	font-weight: 400;
+	color:#0000FF;
+}
+.sp2{
+	font-weight: 400;
+}
+.sp3{
+	font-weight: 400;
+}
+.sp4{
+	font-weight: 400;
+}
+    .myPic{
+        padding:0px;
+        border:0px;
+        margin:0px;
+        height:100%;
+        width:auto;
+        border-radius: 50%;
+
+    }
+    .myName{
+        position:absolute;
+        top:1%;
+        left:14vh;
+        color:#fff;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+        font-size: 2.5vmax;
+    }
+		.ProjImage{
+			float: left;
+			height: 15vh;
+		}
+		.smallText{
+			font-size:1.2vmax;
+		}
+    .myDescript{
+        position: absolute;
+        left:14vh;
+        top: 6.7vh;
+         white-space: pre;
+        font-family: 'Open Sans',sans-serif;
+        font-weight: 300;
+        font-size: 1.2vmax;
+        color:#999;
+    }
+    .mainTopBand1{
+        position: absolute;
+        top:2%;
+        left:0%;
+        width:100%;
+        background-color: #222;
+        height:3vmax;
+        color: #ffc;
+    }
+    .mainTopBand2{
+        position: absolute;
+        top:2%;
+        left:0%;
+        width:100%;
+        background-color: #222;
+        height:3vmax;
+        color: #cff;
+    }
+    .mainTopBand3{
+        position: absolute;
+        top:2%;
+        left:0%;
+        width:100%;
+        background-color: #222;
+        height:3vmax;
+        color: #fcf;
+    }
+		.liintro{
+			font-size:1.2vmax;
+		}
+		.leftalign{text-align:left;width:90%;}

@@ -2,7 +2,7 @@
 <div>Hi, I am <span class="sp1">Akshay Gadre</span></div>
 <div>I <span class="sp2">design</span>, <span class="sp3">develop</span> and <span class="sp4">innovate</span></div>
 <div>&nbsp;</div>
-<div>I am currently a third year <span class="sp1">Ph.D student</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">Carnegie Mellon University</span>. I currently research on enhancing the <span class="sp1">quality</span> and <span class="sp1">utility</span> of <span class="sp1">LP-WAN networks</span> for various applications in day-to-day life at <a href="https://www.witechlab.com">WiTech Lab</a> with Prof. <a href="https://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>.</div><br />
+<div>I am currently a fourth year <span class="sp1">Ph.D student</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">Carnegie Mellon University</span>. I currently research on enhancing the <span class="sp1">quality</span> and <span class="sp1">utility</span> of <span class="sp1">LP-WAN networks</span> for various applications in day-to-day life at <a href="https://www.witechlab.com">WiTech Lab</a> with Prof. <a href="https://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>.</div><br />
 <div> <span id="xx2" class="underliner">Research</span> | <span id="xx3" class="underliner">Publications</span> | <span id="xx4" class="underliner">Experience</span> | <span id="xx5" class="underliner">Resume</span> </div>
 </div>
 <div class="textright1">

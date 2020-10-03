@@ -75,8 +75,8 @@ font-size: 1.25vmax;
 a{font-weight: 400;
  color:#000;}
 .textcenter1{position:absolute;left:0%;top:35%;text-align:center;width:100%;}
-.textleft1{position:absolute;left:2%;top:15%;text-align:center;width:56%;}
-.textright1{position:absolute;left:62%;top:7%;text-align:left;width:35%;}
+.textleft1{position:absolute;left:2%;top:15%;text-align:center;width:40%;}
+.textright1{position:absolute;left:46%;top:7%;text-align:left;width:51%;}
 .publication{text-align:left;padding:1.5%;width:95%;}
 .underliner{text-decoration: underline;}
 .underliner:hover{ cursor: pointer; }

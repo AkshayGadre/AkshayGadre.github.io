@@ -1,7 +1,8 @@
 <div class="textcenter2">
 <div class="publication"><b>Publications (<span id="allpapers" class="underliner">All Papers</span> | <span id="conf" class="underliner">Conference and Journal Papers</span> | <span id="workshop" class="underliner">Posters + Workshop Papers</span> | <span id="invited" class="underliner">Invited Papers</span> | <span id="patents" class="underliner">Patents</span> )</b>
 		 <ul>
-
+		   <li class="paper-conf"> <a href="https://www.witechlab.com/">Full Duplex Radios: Are we there yet?</a>,</br>Vaibhav Singh*, <span class="sp1"> Akshay Gadre*</span>, Swarun Kumar </br><i> ACM HotNets </i>, Nov 2020
+		   <li class="paper-conf"> <a href="https://dl.acm.org/doi/pdf/10.1145/3372224.3419204">Joltik: Enabling Energy-Efficient "Future-Proof" Analytics on Low-Power Wide-Area Networks</a>,</br>Mingran Yang, Junbo Zhang, <span class="sp1"> Akshay Gadre</span>, Zaoxing Liu, Swarun Kumar, Vyas Sekar </br><i> ACM MOBICOM </i>, Sep 2020
        <li class="paper-conf"> <a href="https://www.witechlab.com/mmfd.html">Millimeter-Wave Full Duplex Radios</a>,</br>Vaibhav Singh, Susnata Mondal, <span class="sp1"> Akshay Gadre</span>, Milind Srivastava, Jeyanandh Paramesh, Swarun Kumar </br><i> ACM MOBICOM </i>, Sep 2020
 			 <li class="paper-workshop"> <a href="">Invited Paper: Designing an ML-Friendly Wireless Physical Layer for Low-Power IoT</a>,</br><span class="sp1"> Akshay Gadre</span>, Swarun Kumar </br><i> IEEE WiOpt, WMLC  </i>, Jun 2020
 			 <li class="paper-conf"> <a href="https://www.witechlab.com/quail.html">Quick (and Dirty) Aggregate Queries for Low-Power WANs</a>,</br><span class="sp1"> Akshay Gadre</span>, Fan Yi, Anthony Rowe, Bob Iannucci, Swarun Kumar </br><i> ACM/IEEE IPSN </i>, Apr 2020<span class="spRed"> [Best Paper Award]</span>

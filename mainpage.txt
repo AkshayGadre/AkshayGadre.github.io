@@ -3,7 +3,7 @@
 <div>&nbsp;</div>
 <div>The goal of my research is to <span class="sp1">empower the low-power IoT sensors deployed on earth and space by enabling better connectivity, sensing capability and scalability</span>. My projects develop novel wireless physical layer solutions and phase-synchronization architectures for city-wide low-power wide area network infrastructure to improve the range, battery life and throughput of these power-starved IoT clients, further enabling important applications at scale such as forest fire detection and real-time satellite monitoring.</div><br />
 <div><span class="spBlue">I am on the academic job market for 2021-22!</span></div>
-<div> <span id="xx2" class="underliner spBlue">Research Statement</span> | <span id="xx3" class="underliner spBlue">Teaching Statement</span> | <span id="xx4" class="underliner spBlue">Diversity Statement</span> | <span id="xx5" class="underliner spBlue">Resume</span> </div>
+<div> <span id="xxRS" class="underliner spBlue">Research Statement</span> | <span id="xxTS" class="underliner spBlue">Teaching Statement</span> | <span id="xxDS" class="underliner spBlue">Diversity Statement</span> | <span id="xxCV" class="underliner spBlue">Resume</span> </div>
 
 <br /><br />
 <div> <span id="xx2" class="underliner">Research</span> | <span id="xx3" class="underliner">Publications</span> | <span id="xx4" class="underliner">Experience</span>  </div>

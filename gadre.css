@@ -22,6 +22,7 @@ body,html{
 	background-color:#222;
 	color:#ddd;
 
+
 }
 .alignleft {
 	float: left;
@@ -35,11 +36,11 @@ body,html{
 }
 #mainBand{
 	position:absolute;
-	top:12%;
+	top:14%;
 	left:0%;
     padding: 2%;
 
-	height:84%;
+	height:78%;
 	width:96%;
 	overflow-y:auto;
     font-weight: 300;
@@ -81,7 +82,7 @@ a{font-weight: 400;
 .publication{text-align:left;padding:1.5%;width:95%;}
 .underliner{text-decoration: underline;}
 .underliner:hover{ cursor: pointer; }
-.textcenter2{position:absolute;left:0%;top:1vmax;width:95%;height:75%;padding:2.5%;font-size:1.25vmax;}
+.textcenter2{position:absolute;left:0%;top:0%;width:95%;height:65%;margin:2.5%;font-size:1.25vmax;}
 .textcenter0{position:absolute;left:0%;top:45%;text-align:center;width:100%;}
 .optionbutton{
 	position:absolute;
@@ -140,7 +141,7 @@ a{font-weight: 400;
     }
 		.ProjImage{
 			float: left;
-			height: 15vh;
+			height: 25vh;
 		}
 		.smallText{
 			font-size:1.2vmax;

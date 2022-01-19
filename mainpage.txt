@@ -10,13 +10,14 @@
 </div>
 <div class="textright1">
 <ul><span class="sp1">Recent News:</span>
+  <li class="liintro">Paper <a class="sp1" href="https://www.witechlab.com/">"MiLTOn: Sensing Product Integrity without Opening the Box using Non-Invasive Acoustic Vibrometry"</a> accepted at <span class="spBlue">IPSN 2022</span></li>
   <li class="liintro">Awarded <span class="spRed" >ACM SIGBED-SIGSOFT Frank Anger Memorial Award 2021</span> </li>
   <li class="liintro">Paper <a class="sp1" href="https://www.witechlab.com/owll.html">"OwLL: Accurate LoRa Localization using the TV Whitespaces"</a> accepted at <span class="spBlue">IPSN 2021</span></li>
   <li class="liintro">Created inter-university <span class="sp1">O.W.L. Reading Group</span>.<span class="spBlue"> DM for Slack link!</span> </li>
   <li class="liintro">Paper <span class="sp1">"Full Duplex Radios: Are we there yet?"</span> accepted at <span class="spBlue">HotNets 2020</span></li>
   <li class="liintro">Awarded <a class="sp1" href="https://cylab.cmu.edu/news/2020/08/07-presidential-fellows.html">CyLab Presidential Fellowship 2020-21</a> for work on IoT Security and Privacy.</li>
   <li class="liintro">Spent Summer 2020 working at <span class="sp1">Azure Global Research</span> with <a class="sp1" href="https://people.csail.mit.edu/deepak/">Deepak Vasisht</a> and <a class="sp1" href="https://www.microsoft.com/en-us/research/people/ranveer/">Ranveer Chandra</a>  </li>
-  <li class="liintro">Paper <span class="sp1">"Joltik: Enabling Energy-Efficient "Future-Proof" Analytics on Low-Power Wide-Area Networks"</span> accepted at <span class="spBlue">MOBICOM 2020</span></li>
+  <!-- <li class="liintro">Paper <span class="sp1">"Joltik: Enabling Energy-Efficient "Future-Proof" Analytics on Low-Power Wide-Area Networks"</span> accepted at <span class="spBlue">MOBICOM 2020</span></li> -->
   <li class="liintro">Paper <span class="sp1">"Quick (and Dirty) Aggregate Queries for Low-Power WANs"</span> wins <span class="spRed">Best Paper Award</span> at <span class="spBlue">IPSN 2020</span></li>
 
 </ul>

@@ -2,8 +2,9 @@
 <div>Hi, I am <span class="sp1">Akshay Gadre</span>, a fifth year <span class="sp1">Ph.D student</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">Carnegie Mellon University</span> working at <a href="https://www.witechlab.com">WiTech Lab</a> with Prof. <a href="https://www.andrew.cmu.edu/user/swarunk/">Swarun Kumar</a>.</div>
 <div>&nbsp;</div>
 <div>The goal of my research is to <span class="sp1">empower the low-power IoT sensors deployed on earth and space by enabling better connectivity, sensing capability and scalability</span>. My projects develop novel wireless physical layer solutions and phase-synchronization architectures for city-wide low-power wide area network infrastructure to improve the range, battery life and throughput of these power-starved IoT clients, further enabling important applications at scale such as forest fire detection and real-time satellite monitoring.</div><br />
-<div><span class="spBlue">I am on the academic job market for 2021-22!</span></div>
-<div> <span id="xxRS" class="underliner spBlue">Research Statement</span> | <span id="xxTS" class="underliner spBlue">Teaching Statement</span> | <span id="xxDS" class="underliner spBlue">Diversity Statement</span> | <span id="xxCV" class="underliner spBlue">Resume</span> </div>
+<div><span class="spBlue">I will join as Assistant Professor of Electrical and Computer Engineering at University of Washington in Fall 2022!</span></div>
+<div><span class="spBlue">I am looking for hardworking and persevering Ph.D students to join me in solving real world problems using wireless solutions!</span></div>
+
 
 <br /><br />
 <div> <span id="xx2" class="underliner">Research</span> | <span id="xx3" class="underliner">Publications</span> | <span id="xx4" class="underliner">Experience</span>  </div>

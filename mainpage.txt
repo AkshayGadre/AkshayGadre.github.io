@@ -1,5 +1,5 @@
 <div class="textleft1">
-<div>Hi, I am <span class="sp1">Akshay Gadre</span>, an <span class="sp1">Assistant Professor</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">University of Washington</span> </div>
+<div>Hi, I am <span class="sp1">Akshay Gadre</span>, <span class="sp1">Assistant Professor</span> in <span class="sp1">Electrical and Computer Engineering</span> at <span class="sp1">University of Washington</span> </div>
 <div>&nbsp;</div>
 <div>The goal of my research is to <span class="sp1">empower the low-power IoT sensors deployed on earth and space by enabling better connectivity, sensing capability and scalability</span>. My projects develop novel wireless physical layer solutions and phase-synchronization architectures for city-wide low-power wide area network infrastructure to improve the range, battery life and throughput of these power-starved IoT clients, further enabling important applications at scale such as forest fire detection and real-time satellite monitoring.</div><br />
 <div><span class="spBlue">I joined as Assistant Professor of Electrical and Computer Engineering at University of Washington in Fall 2022!</span></div>

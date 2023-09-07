@@ -1,0 +1,36 @@
+<div class="textcenter2">
+<div class="awards"><b>Awards </b>
+		 <ul>
+			<li class="award"> <span >ACM SIGBED-SIGSOFT Frank Anger Memorial Award 2021</span>
+			<li class="award"> <span >CyLab Presidential Fellowship 2020-21</span>
+			<li class="award"> <span >ACM/IEEE IPSN 2020 Best Paper Award</span>
+			<li class="award"> <span >ACM/IEEE IPSN Ph.D Forum 2020 Best Presentation Award</span>
+			<li class="award"> <span >ACM MOBICOM 2018 Best Poster Runner-up Award</span>
+			<li class="award"> <span >ACM/IEEE IPSN 2018 Best Paper Award</span>
+			<li class="award"> <span >ACM/IEEE CPSWeek 2018 Travel Grant Recipient</span>
+			<li class="award"> <span >Carnegie Institute of Technology Dean’s Fellow 2017</span>
+			<li class="award"> <span >One of the two people awarded Bachelor of Technology (Honors) from CSE@IIT Madras out of 62</span>
+			<li class="award"> <span >Placed 3rd internationally in ThinkQuest Digital Media Event 2011 conducted by ORACLE Education Foundation</span>
+		</ul>
+</div>
+<div class="awards"><b>Press </b>
+		 <ul>
+			<li class="award"> <a href="https://www.ece.uw.edu/spotlight/2022-23-new-faculty/">UW ECE welcomes seven new faculty members</a> by UW ECE.
+			<li class="award"> <a href="https://www.ece.cmu.edu/news-and-events/story/2020/09/squeezing-more-wireless.html">Squeezing More Out of Wireless</a> by CMU ECE.
+			<li class="award"> <a href="https://www.cylab.cmu.edu/news/2020/08/07-presidential-fellows.html">CyLab names 2020 Presidential Fellows</a> by CMU CyLab
+			<li class="award"> <a href="https://www.ece.cmu.edu/news-and-events/story/2020/04/quail-ipsn-best-paper.html">Tracking Wildfires</a> by CMU ECE.
+			<li class="award"> <a href="https://www.ece.cmu.edu/news-and-events/story/2018/04/faculty-and-students-win-at-ipsn.html">Faculty and students win at IPSN 2018</a> by CMU ECE.
+		</ul>
+</div>
+
+<div class="awards"><b>Service </b>
+		 <ul>
+			<li class="award"> <span class="sp1">Program and General Chair - </span> ACM LP-IoT 2021
+			<li class="award"> <span class="sp1">Program Committee Member - </span> ACM Sensys 2023, ACM/IEEE IPSN 2023, ACM/IEEE IoTDI 2023
+			<li class="award"> <span class="sp1">Workshop Program Committee Member - </span> ACM EnSys 2022-2023,  ACM AgSys 2022-2023,  ACM USN 2023, ACM LEO-NET 2023
+			<li class="award"> <span class="sp1">Journal Reviewer - </span> ACM/IEEE TON 2020-2023, ACM IMWUT 2023, ACM TOSN 2019-2023, ACM TALLIP 2019-2020, IEEE TIFS 2021, IEEE IoT 2019-2020, IEEE Access 2020
+	
+		</ul>
+</div>
+
+</div>

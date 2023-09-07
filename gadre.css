@@ -7,7 +7,7 @@ body,html{
 	color:#333;
 	background-color:#fff;
 	font-family:Ubuntu;
-	font-size:1.25vmax;
+	font-size:1vmax;
     overflow: hidden;
 }
 #topBand{
@@ -15,7 +15,7 @@ body,html{
 	position:absolute;
 	top:0%;
 	left:0%;
-	height:10%;
+	height:5vw;
 	width:98%;
     padding:1%;
 
@@ -30,13 +30,13 @@ body,html{
 
 .alignright {
 	float: right;
-    font-size: 1vmax;
+    font-size: 0.7vw;
     font-family: 'Open Sans',sans-serif;
     font-weight: 300;
 }
 #mainBand{
 	position:absolute;
-	top:14%;
+	top:6vw;
 	left:0%;
     padding: 2%;
 
@@ -45,44 +45,45 @@ body,html{
 	overflow-y:auto;
     font-weight: 300;
     font-family: 'Open Sans',sans-serif;
-font-size: 1.25vmax;
+font-size: 1vmax;
 }
 #bottomBand1{
 	position:absolute;
 	top:0%;
     padding:1%;
-    left:35vmax;
+    left:35vw;
 	height:10%;
 	width:80%;
     color:#ccc;
+	font-size:1vw;
 
 }
 .option{cursor: pointer; cursor: hand;
 	position:absolute;
 	height:50%;
 	width:20%;
-    font-size: 1.5vmax;
+    font-size: 1.5vw;
     font-weight: 300;
     font-family: 'Open Sans',sans-serif;
 
 }
 .l1{left:0vmax;color:#fff;}
-.l2{left:10vmax;}
-.l3{left:22vmax;}
-.l4{left:34vmax;}
-.l5{left:45vmax;}
-.t1{top:3.2vmax}
+.l2{left:7vw;}
+.l3{left:16vw;}
+.l4{left:27vw;}
+.l5{left:43vw;}
+.t1{top:3.2vw}
 .t2{top:50%;}
 a{font-weight: 400;
  color:#000;}
 .textcenter1{position:absolute;left:0%;top:35%;text-align:center;width:100%;}
-.textleft1{position:absolute;left:2%;top:15%;text-align:center;width:60%;}
+.textleft1{position:relative;left:2%;top:1vw;text-align:left;width:58%;}
 .textleft11{text-align:left;}
-.textright1{position:absolute;left:66%;top:7%;text-align:left;width:31%; }
+.textright1{position:absolute;left:61%;top:1vw;text-align:left;width:36%; }
 .publication{text-align:left;padding:1.5%;width:95%;}
 .underliner{text-decoration: underline;}
 .underliner:hover{ cursor: pointer; }
-.textcenter2{position:absolute;left:0%;top:0%;width:95%;height:65%;margin:2.5%;font-size:1.25vmax;}
+.textcenter2{position:absolute;left:0.5vmax;top:0.5vmax;width:95%;height:65%;margin:2.5%;font-size:1.1vmax;}
 .textcenter0{position:absolute;left:0%;top:45%;text-align:center;width:100%;}
 .optionbutton{
 	position:absolute;
@@ -132,28 +133,46 @@ a{font-weight: 400;
     }
     .myName{
         position:absolute;
-        top:1%;
-        left:14vh;
+        top:0.5vw;
+        left:7vw;
         color:#fff;
         font-family: 'Open Sans',sans-serif;
         font-weight: 300;
-        font-size: 2.5vmax;
+        font-size: 2vw;
     }
-		.ProjImage{
-			float: left;
-			height: 25vh;
+		.ProjImage1{
+			width: 20vw;
+			
+			
+		}
+		.ProjImage2{
+			width: 20vw;
+			left:2.5vw;
+			
+		}
+		.ProjImage3{
+			position:relative;
+			width: 14vw;
+			left:3vw;
+			align-items:center;
+			
+		}
+		.ProjImage4{
+			width: 20vw;
+		
+			
 		}
 		.smallText{
-			font-size:1.2vmax;
+			font-size:1vmax;
 		}
     .myDescript{
         position: absolute;
-        left:14vh;
-        top: 6.7vh;
+        left:7vw;
+        top: 3.5vw;
          white-space: pre;
         font-family: 'Open Sans',sans-serif;
         font-weight: 300;
-        font-size: 1.2vmax;
+        font-size: 1vw;
         color:#999;
     }
     .mainTopBand1{
@@ -184,6 +203,11 @@ a{font-weight: 400;
         color: #fcf;
     }
 		.liintro{
-			font-size:1vmax;
+			font-size:0.8vmax;
 		}
 		.leftalign{text-align:left;width:90%;}
+		.area1{position:absolute;width:20vw;align-items:center;}
+		.area2{position:absolute;width:20vw;left:25vw;align-items:center;justify-content:center;}
+		.area3{position:absolute;width:20vw;left:50vw;align-items:center;justify-content:center;}
+		.area4{position:absolute;width:20vw;left:75vw;align-items:center;justify-content:center;}
+		.areatext{text-align:center;position:relative;top:1vh;display:block;}

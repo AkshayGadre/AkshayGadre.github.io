@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>NEWT Lab</title>
+<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />`
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500,700|Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="gadre.css">
+</head>
+<body>
+<div id="topBand"><span class="alignleft"> <img src="./RayTrackMainWhiteGlow.png" alt="Smiley face" class="myPic"></span><span class="alignright small">Last updated: 7<sup>th</sup> Mar 2024</span></div>
+<div id="mainBand">
+
+<div class="textcenter2">
+	
+  <div>	More Information is Incoming Soon!
+
+</div>
+
+</div>
+
+
+
+
+	</div>
+
+<div id="bottomBand1">
+	<div id="1" class="option l0 t1">				<div class="optiontext">&nbsp;Home</div>	</div>
+	<div id="12" class="option l1 t1">
+
+		<div class="optiontext">&nbsp;People</div>
+	</div>
+	<div id="x2" class="option l2 t1">
+
+		<div class="optiontext">&nbsp;Research</div>
+	</div>
+	<div id="3" class="option l3 t1">
+
+		<div class="optiontext">&nbsp;Publications</div>
+	</div>
+	<div id="4" class="option l4 t1">
+
+		<div class="optiontext">&nbsp;Awards and Funding</div>
+	</div>
+	<div id="5" class="option l5 t1">
+
+		<div class="optiontext">&nbsp;Contact us</div>
+	</div>
+</div>
+
+</body>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142128224-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142128224-1');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $('#mainBand').load("mainpage.txt");
+});
+$('*').on('click','#1',function(){
+	$('#mainBand').load("mainpage.txt");
+	});
+$('*').on('click','#1',function(){
+	$('#mainBand').load("mainpage.txt");
+	});
+	$('*').on('click','#12',function(){
+	$('#mainBand').load("people.txt");
+	});
+$('*').on('click','#12',function(){
+	$('#mainBand').load("people.txt");
+	});
+
+$('*').on('click','#x2',function(){
+    $('#mainBand').load("research.txt");
+});
+$('*').on('click','#xx2',function(){
+    $('#mainBand').load("research.txt");
+});
+
+$('*').on('click','#x3',function(){
+    $('#mainBand').load("publications.txt");
+});
+$('*').on('click','#xx3',function(){
+  $('#mainBand').load("publications.txt");
+});
+$('*').on('click','#3',function(){
+	$('#mainBand').load("publications.txt");
+});
+
+$('*').on('click','#conf',function(){
+	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
+  $(".paper-conf").show();
+});
+
+$('*').on('click','#allpapers',function(){
+	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
+  $(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").show();
+});
+
+$('*').on('click','#workshop',function(){
+	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
+  $(".paper-workshop").show();
+});
+
+$('*').on('click','#invited',function(){
+	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
+  $(".paper-invited").show();
+});
+$('*').on('click','#thesis',function(){
+	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
+  $(".paper-thesis").show();
+});
+$('*').on('click','#patents',function(){
+	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
+  $(".paper-patent").show();
+});
+
+$('*').on('click','#xx4',function(){
+    $('#mainBand').load("awards.txt");
+});
+$('*').on('click','#4',function(){
+    $('#mainBand').load("awards.txt");
+});
+$('*').on('click','#7',function(){
+	window.location = './CV_Website.pdf';
+});
+$('*').on('click','#xx5',function(){
+	window.location = './CV_Website.pdf';
+});
+
+$('*').on('click','#xxRS',function(){
+	window.location = './Research_Statement_Website.pdf';
+});
+$('*').on('click','#xxTS',function(){
+	window.location = './Teaching_Statement_Website.pdf';
+});
+$('*').on('click','#xxDS',function(){
+	window.location = './Diversity_Statement_Website.pdf';
+});
+$('*').on('click','#xxCV',function(){
+	window.location = './CV_Website.pdf';
+});
+$('*').on('click','#x8',function(){
+    $('#mainBand').html('<div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div> <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('*').on('click','#9',function(){
+    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
+});
+$('*').on('click','#5',function(){
+    $('#mainBand').html('<div class="textcenter2">We are always happy to collaborate on new research problems in wireless, mobile and cyber-physical systems. Feel free to contact the director at the information below for discussing such problems.  </div><div class="textcenter0">		<div>You can reach out to me at:</div><div>E-mail: <a href="mailto:gadre@uw.edu">gadre@uw.edu</a></div><div>LinkedIn: <a href="https://www.linkedin.com/in/gadreakshay">Akshay Gadre</a></div><div>During working hours: EE 407, 4th floor, Paul Allen Center, 185 E Stevens Way NE, Seattle, WA-98195</div>	</div>').show();
+});
+
+</script>
+</html>

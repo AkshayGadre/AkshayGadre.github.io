@@ -1,6 +1,15 @@
 <div class="textcenter2">
+
+<div class="awards"><b>Funding Sources (Thank you for supporting our research!) </b>
+		 <ul>
+			<li class="award"> <span class="sp1">National Science Foundation </span> SoilTech IUCRC - SoilCam Project 
+			<li class="award"> <span class="sp1">T-Mobile T-Challenge 2024 </span> Award
+		</ul>
+</div>
 <div class="awards"><b>Awards </b>
 		 <ul>
+			<li class="award"> <span >T-Mobile T-Challenge 2024 - AI for Telecommunications Most Engaging Presentation Award</span>
+			<li class="award"> <span >T-Mobile T-Challenge 2024 - AI for Telecommunications Finalist</span>
 			<li class="award"> <span >ACM SIGBED-SIGSOFT Frank Anger Memorial Award 2021</span>
 			<li class="award"> <span >CyLab Presidential Fellowship 2020-21</span>
 			<li class="award"> <span >ACM/IEEE IPSN 2020 Best Paper Award</span>
@@ -32,5 +41,7 @@
 	
 		</ul>
 </div>
+
+
 
 </div>

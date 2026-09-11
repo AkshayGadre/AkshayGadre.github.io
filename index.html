@@ -1,177 +1,1248 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Akshay Gadre</title>
-<link rel="shortcut icon" type="image/x-icon" href="./icon.ico" />`
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:100,300,400,500,700|Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="gadre.css">
+<!--
+  akshaygadre.com, redesigned September 2026
+  One file, no build step, no framework. Drop on any static server.
+  Stylistically paired with the NEWT Lab site (newtlab.ece.uw.edu):
+  same tokens, same Archivo variable type, same 1px-rule structure.
+
+  Maintenance notes:
+  · The portrait is /myPhoto2.png at the site root (same as the old site).
+    Swap the src below to change it; it grayscales automatically.
+  · Publications, awards, grants, and news are plain HTML lists: search
+    for "PUBLICATIONS", "AWARDS", "FUNDING", "NEWS" section comments.
+  · Each publication's category is its data-type attribute:
+    conf | workshop | invited | patent | thesis.
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshay Gadre | Assistant Professor, ECE, University of Washington</title>
+<meta name="description" content="Akshay Gadre is an Assistant Professor of Electrical & Computer Engineering at the University of Washington and director of the NEWT Lab, building wireless systems that sense and connect the physical world.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='white'/%3E%3Cpath d='M4 22 Q7 12 10 22 T16 22 Q17.5 8 19 22 Q20 4 21 22 Q22 2 23 22 Q24 6 25 22 Q26 10 27 22' stroke='black' stroke-width='1.6' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Tokens. Shared with the NEWT Lab site: black, white, two greys.
+   Color enters only through the portrait and research media.
+   ============================================================ */
+:root{
+  --ink:#000000;
+  --paper:#ffffff;
+  --grey:#6e6e6e;      /* secondary text */
+  --hairline:#d8d8d8;  /* minor rules; major rules are pure ink */
+  --gutter:clamp(20px, 4vw, 48px);
+  --measure:62ch;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  font-variation-settings:'wdth' 100;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--ink);color:var(--paper)}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:1px}
+img{display:block;max-width:100%}
+
+.wrap{max-width:1280px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:var(--paper);
+  border-bottom:1px solid var(--ink);
+}
+.site-head .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:60px;gap:24px;
+}
+.brand{
+  font-weight:900;
+  font-variation-settings:'wdth' 62;
+  font-size:24px;letter-spacing:.01em;
+  text-decoration:none;white-space:nowrap;
+}
+.site-nav{display:flex;gap:clamp(12px,2.2vw,28px);flex-wrap:wrap}
+.site-nav a{
+  text-decoration:none;font-size:15px;font-weight:500;
+  padding:4px 0;border-bottom:2px solid transparent;
+}
+.site-nav a:hover{border-bottom-color:var(--ink)}
+.site-nav a.is-active{border-bottom-color:var(--ink);font-weight:700}
+.lab-link{font-size:13px;color:var(--grey);text-decoration:none;white-space:nowrap}
+.lab-link:hover{color:var(--ink)}
+@media(max-width:860px){
+  .site-head .wrap{height:auto;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+  .lab-link{display:none}
+}
+
+/* ============================================================
+   Hero: the name is the wordmark
+   ============================================================ */
+.hero{padding-top:clamp(32px,5vh,72px)}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.6fr) minmax(220px,.9fr);
+  gap:clamp(24px,4vw,72px);
+  align-items:end;
+  padding-bottom:clamp(28px,4vh,52px);
+}
+.hero-name{
+  font-weight:900;
+  font-variation-settings:'wdth' 62;
+  font-size:clamp(64px, 12.5vw, 176px);
+  line-height:.86;
+  letter-spacing:-.015em;
+  margin-left:-.04em; /* optical alignment of the A */
+}
+.hero-role{
+  margin-top:clamp(16px,2.5vh,28px);
+  font-weight:600;
+  font-variation-settings:'wdth' 118;
+  font-size:clamp(15px,1.8vw,20px);
+  line-height:1.4;
+}
+.hero-role a{text-decoration-thickness:2px}
+.hero-lede{
+  margin-top:clamp(14px,2vh,22px);
+  font-size:clamp(17px,1.9vw,21px);
+  font-weight:500;line-height:1.45;letter-spacing:-.005em;
+  max-width:34em;
+}
+.hero-links{
+  margin-top:clamp(16px,2.5vh,26px);
+  display:flex;gap:18px;flex-wrap:wrap;
+  font-size:14.5px;font-weight:600;
+}
+.hero-photo{
+  aspect-ratio:1/1;overflow:hidden;
+  border:1px solid var(--ink);background:var(--ink);
+}
+.hero-photo img{
+  width:100%;height:100%;object-fit:cover;
+  filter:grayscale(1) contrast(1.04);
+  transition:filter .35s ease;
+}
+.hero-photo:hover img{filter:none}
+@media(max-width:760px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo{max-width:280px}
+}
+.chirp-band{
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+#chirp{display:block;width:100%;height:clamp(96px,14vh,170px)}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section{padding:clamp(48px,8vh,104px) 0;scroll-margin-top:72px}
+.section + .section{border-top:1px solid var(--ink)}
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  gap:24px;flex-wrap:wrap;
+  margin-bottom:clamp(28px,4vh,52px);
+}
+.section-head h2{
+  font-weight:800;
+  font-variation-settings:'wdth' 118;
+  font-size:clamp(30px,4.4vw,54px);
+  letter-spacing:-.01em;line-height:1;
+}
+.section-head p{color:var(--grey);font-size:15px;max-width:44ch}
+
+/* ============================================================
+   About: bio and a two-column record
+   ============================================================ */
+.about-grid{
+  display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,88px);
+}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about-grid .bio p + p{margin-top:14px}
+.record h3{
+  font-weight:800;font-variation-settings:'wdth' 118;
+  font-size:20px;margin-bottom:12px;
+}
+.record ul{list-style:none;font-size:15px}
+.record li{
+  display:grid;grid-template-columns:96px 1fr;gap:14px;
+  padding:10px 0;border-top:1px solid var(--hairline);
+  line-height:1.45;
+}
+.record li:first-child{border-top:0;padding-top:0}
+.record time{font-size:13.5px;color:var(--grey);font-weight:600;padding-top:2px}
+.record b{font-weight:700}
+.record .sub{display:block;color:var(--grey);font-size:14px}
+
+/* ============================================================
+   Research: the NEWT Lab, centered, with the lab's own
+   statement and colored thrust cards
+   ============================================================ */
+.lab-head{text-align:center;margin-bottom:clamp(28px,4.5vh,52px)}
+.lab-name{
+  display:inline-block;
+  font-weight:800;font-variation-settings:'wdth' 118;
+  font-size:clamp(30px,4.4vw,54px);
+  letter-spacing:-.01em;line-height:1;
+  text-decoration:none;
+  border-bottom:3px solid var(--ink);
+  padding-bottom:6px;
+}
+.lab-name:hover{background:var(--ink);color:var(--paper)}
+.lab-full{
+  margin-top:14px;
+  font-size:13.5px;font-weight:600;color:var(--grey);
+  font-variation-settings:'wdth' 125;letter-spacing:.02em;
+}
+.lab-statement{
+  margin:clamp(18px,3vh,28px) auto 0;
+  font-size:clamp(19px,2.4vw,27px);font-weight:500;
+  line-height:1.35;letter-spacing:-.01em;
+}
+.lab-sub{
+  margin:12px auto 0;
+  font-size:clamp(15px,1.7vw,17.5px);color:var(--grey);line-height:1.5;
+}
+.thrusts-kicker{
+  text-align:center;color:var(--grey);font-size:15px;
+  margin-bottom:clamp(18px,3vh,30px);
+}
+.thrust-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--ink);border:1px solid var(--ink);
+}
+@media(max-width:900px){.thrust-cards{grid-template-columns:1fr}}
+.thrust-card{
+  background:var(--paper);
+  padding:22px 22px 26px;
+  text-decoration:none;
+  display:flex;flex-direction:column;gap:8px;
+  transition:background .18s ease;
+}
+.thrust-card .tc-pre{
+  font-size:13px;font-weight:600;letter-spacing:.02em;
+  font-variation-settings:'wdth' 125;color:var(--grey);
+}
+.thrust-card .tc-name{
+  font-weight:850;font-variation-settings:'wdth' 68;
+  font-size:clamp(28px,3.2vw,44px);
+  line-height:1;letter-spacing:-.01em;
+  padding-bottom:10px;border-bottom:3px solid currentColor;
+}
+.thrust-card .tc-desc{font-size:14.5px;color:var(--grey);line-height:1.5;margin-top:4px}
+.tc-radar .tc-name{color:#E11D48}
+.tc-ocean .tc-name{color:#0E7490}
+.tc-touch .tc-name{color:#7C3AED}
+.thrust-card:hover,.thrust-card:focus-visible{background:var(--ink)}
+.thrust-card:hover .tc-pre,.thrust-card:hover .tc-desc,
+.thrust-card:focus-visible .tc-pre,.thrust-card:focus-visible .tc-desc{color:var(--paper)}
+
+/* ============================================================
+   Publications: filterable, same UX as the lab site
+   ============================================================ */
+.pub-filter{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:clamp(24px,3.5vh,40px);
+}
+.pub-filter button{
+  font:inherit;font-size:13.5px;font-weight:600;
+  padding:8px 14px;cursor:pointer;
+  border:1px solid var(--ink);background:var(--paper);color:var(--ink);
+}
+.pub-filter button span{font-weight:400;color:var(--grey);margin-left:4px}
+.pub-filter button:hover{text-decoration:underline;text-underline-offset:3px}
+.pub-filter button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.pub-filter button[aria-pressed="true"] span{color:var(--paper);opacity:.7}
+.pub[hidden],.pub-year[hidden]{display:none}
+.pub-year{
+  display:grid;grid-template-columns:110px 1fr;gap:clamp(16px,3vw,48px);
+  padding:26px 0;
+}
+.pub-year + .pub-year{border-top:1px solid var(--hairline)}
+.pub-year > h3{
+  font-weight:850;
+  font-variation-settings:'wdth' 68;
+  font-size:clamp(30px,3.4vw,44px);line-height:1;
+}
+.pub{padding:14px 0}
+.pub + .pub{border-top:1px solid var(--hairline)}
+.pub h4{font-size:17.5px;font-weight:700;line-height:1.35;letter-spacing:-.005em}
+.pub h4 a{text-decoration:none}
+.pub h4 a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.pub .authors{margin-top:5px;font-size:14.5px;color:var(--grey)}
+.pub .authors b{color:var(--ink);font-weight:600}
+.pub .meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px}
+.venue{border:1px solid var(--ink);padding:2px 8px;font-weight:600}
+.award{background:var(--ink);color:var(--paper);padding:3px 8px;font-weight:600}
+.pub .links{display:flex;gap:14px;flex-wrap:wrap}
+.pub .links a{font-weight:500}
+@media(max-width:700px){.pub-year{grid-template-columns:1fr;gap:8px}}
+
+/* ============================================================
+   Awards & funding
+   ============================================================ */
+.news-list{list-style:none}
+.news-list li{
+  display:grid;grid-template-columns:120px 1fr;gap:clamp(16px,3vw,48px);
+  padding:14px 0;border-top:1px solid var(--hairline);
+  font-size:16px;line-height:1.5;
+}
+.news-list li:first-child{border-top:0;padding-top:0}
+.news-list time{font-size:13.5px;color:var(--grey);font-weight:600;padding-top:2px}
+.news-list b{font-weight:700}
+@media(max-width:600px){.news-list li{grid-template-columns:1fr;gap:2px}}
+
+.awards-head{
+  font-weight:800;font-variation-settings:'wdth' 118;
+  font-size:20px;margin-bottom:14px;
+}
+.grant-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--ink);border:1px solid var(--ink);
+  margin-bottom:clamp(32px,5vh,56px);
+}
+@media(max-width:900px){.grant-grid{grid-template-columns:1fr}}
+.grant-card{background:var(--paper);padding:18px 18px 20px;display:flex;flex-direction:column;gap:12px}
+.grant-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.grant-top .years{font-size:13.5px;color:var(--grey);font-weight:600;white-space:nowrap}
+.grant-card h4{font-size:16px;font-weight:700;line-height:1.35;letter-spacing:-.005em}
+.grant-card .pi{font-size:13.5px;color:var(--grey);margin-top:auto}
+
+/* ============================================================
+   Students
+   ============================================================ */
+.students-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(28px,5vw,88px);
+}
+@media(max-width:820px){.students-grid{grid-template-columns:1fr}}
+.students-grid ul{list-style:none;font-size:16px}
+.students-grid li{
+  padding:12px 0;border-top:1px solid var(--hairline);line-height:1.5;
+}
+.students-grid li:first-child{border-top:0;padding-top:0}
+.students-grid b{font-weight:700}
+.students-grid .sub{display:block;color:var(--grey);font-size:14.5px}
+.students-note{
+  margin-top:clamp(24px,3.5vh,40px);
+  padding-top:22px;border-top:1px solid var(--hairline);
+  font-size:15.5px;
+}
+
+/* ============================================================
+   Contact
+   ============================================================ */
+.contact-grid{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,88px);
+}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.contact-grid .pitch p + p{margin-top:14px}
+.contact-grid .pitch .big{
+  font-size:clamp(19px,2.2vw,25px);font-weight:500;line-height:1.4;letter-spacing:-.01em;
+}
+.contact-card{font-size:15.5px;line-height:1.7}
+.contact-card h3{
+  font-weight:800;font-variation-settings:'wdth' 118;
+  font-size:20px;margin-bottom:12px;
+}
+.contact-card .email{
+  display:inline-block;margin:6px 0 14px;
+  font-weight:800;font-variation-settings:'wdth' 80;
+  font-size:clamp(22px,2.6vw,30px);letter-spacing:-.01em;
+  text-decoration:none;border-bottom:3px solid var(--ink);
+}
+.contact-card .addr{color:var(--grey)}
+.contact-card .elsewhere{margin-top:16px;display:flex;gap:14px;flex-wrap:wrap;font-weight:600;font-size:14.5px}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-foot{border-top:1px solid var(--ink);padding:26px 0 40px}
+.site-foot .wrap{
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-size:13.5px;color:var(--grey);
+}
+.site-foot .credo{color:var(--ink);font-weight:600}
+</style>
 </head>
 <body>
-<div id="topBand"><span class="alignleft"> <img src="./myPhoto2.png" alt="Smiley face" class="myPic"><div class="myName">Akshay Gadre</div><div class="myDescript">Assistant Professor, ECE @ University of Washington
-Computer Scientist, Engineer and Researcher</div></span><span class="alignright small">Last updated: 31<sup>st</sup> Aug 2023</span></div>
-<div id="mainBand">
 
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Akshay Gadre home">Akshay Gadre</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards &amp; funding</a>
+      <a href="#students">Students</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="lab-link" href="https://newtlab.ece.uw.edu/">NEWT Lab, University of Washington</a>
+  </div>
+</header>
 
-	<div class="textleft1">
-	<div>Hi, I am <span class="sp1">Akshay Gadre</span>, <span class="sp1">Assistant Professor</span> of <a class="sp1" href="https://ece.uw.edu/">Electrical and Computer Engineering</a> at <a class="sp1" href="https://www.uw.edu/">University of Washington</a>. I lead the <a class="sp1" href="https://newtlab.ece.uw.edu/">Networking and Emerging Wireless Technologies (NEWT) Lab</a> which focuses on augmenting new communication and sensing capabilities for the next-generation of wireless technologies.</div>
-	<div>&nbsp;</div>
-	<div>NEWT Lab is exploring new application domains such as satellite IoT, agriculture and underwater devices, to apply our wireless expertise for improving communication and sensing capability of these devices while preserving the security and privacy of sensor data. My doctoral work developed novel wireless physical layer solutions and phase-synchronization architectures for city-wide low-power wide area network infrastructure to improve the range, battery life and throughput of these power-starved IoT clients, further enabling important applications at scale such as forest fire detection and real-time satellite monitoring.</div><br />
-	<div><span class="spBlue">NEWT Lab is looking for hardworking and persevering Ph.D students to solve real world problems using wireless solutions in the following areas:</span> </div>
-	<div><span class="spRed">(1) Agricultural Sensing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) Underwater Acoustics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) Space Constellations &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4) Smart Cities       </span></div>
-	
+<main id="top">
 
-	<br /><br />
-	<!-- <div> <span id="xx2" class="underliner">Research</span> | <span id="xx3" class="underliner">Publications</span> | <span id="xx4" class="underliner">Experience</span>  </div> -->
-	</div>
-	<div class="textright1">
-	<ul><span class="sp1">Recent News:</span>
-	  <li class="liintro"><a class="sp1" href="https://www.youtube.com/watch?v=LcJah7LUSL0">Project RayTrack</a> wins the <a class="sp1" href="https://www.linkedin.com/posts/gadreakshay_super-excited-to-share-that-project-raytrack-activity-7206640491507961856-JFNZ?utm_source=share&utm_medium=member_desktop">Most Engaging Presentation</a> Award at T-Mobile <a class="sp1" href="https://telekom-challenge.com/t-challenge-2024-winner-announcement/">T-Challenge 2024 - AI for Telecommunications.</a></li>
-	  <li class="liintro">Qiancheng graduates with B.S. in ECE. Will join <a class="sp1" href="https://newtlab.ece.uw.edu">NEWT Lab</a> as a Ph.D student</li>
-	  <li class="liintro">Vaibhav defends his M.S. thesis on <a class="sp1" href="https://newtlab.ece.uw.edu">Laser Inter-satellite Links</a> for satellite constellations.</li>
-	  <li class="liintro">Kuang presented a <a class="sp1" href="https://dl.acm.org/doi/pdf/10.1145/3560905.3568077">poster on satellite telemetry</a> at <span class="spBlue">SenSys 2022</span></li>
-	  <li class="liintro">Akshay joins UW ECE!</li>
-	  <!--<li class="liintro">Paper <a class="sp1" href="https://www.witechlab.com/milton.html">"MiLTOn: Sensing Product Integrity without Opening the Box using Non-Invasive Acoustic Vibrometry"</a> accepted at <span class="spBlue">IPSN 2022</span></li>
-	  <li class="liintro">Awarded <span class="spRed" >ACM SIGBED-SIGSOFT Frank Anger Memorial Award 2021</span> </li>
-	  <li class="liintro">Paper <a class="sp1" href="https://www.witechlab.com/owll.html">"OwLL: Accurate LoRa Localization using the TV Whitespaces"</a> accepted at <span class="spBlue">IPSN 2021</span></li>
-	  <li class="liintro">Created inter-university <span class="sp1">O.W.L. Reading Group</span>.<span class="spBlue"> DM for Slack link!</span> </li>
-	  <li class="liintro">Paper <span class="sp1">"Full Duplex Radios: Are we there yet?"</span> accepted at <span class="spBlue">HotNets 2020</span></li>
-	  <li class="liintro">Awarded <a class="sp1" href="https://cylab.cmu.edu/news/2020/08/07-presidential-fellows.html">CyLab Presidential Fellowship 2020-21</a> for work on IoT Security and Privacy.</li> -->
-	  <!-- <li class="liintro">Spent Summer 2020 working at <span class="sp1">Azure Global Research</span> with <a class="sp1" href="https://people.csail.mit.edu/deepak/">Deepak Vasisht</a> and <a class="sp1" href="https://www.microsoft.com/en-us/research/people/ranveer/">Ranveer Chandra</a>  </li>-->
-	  <!-- <li class="liintro">Paper <span class="sp1">"Joltik: Enabling Energy-Efficient "Future-Proof" Analytics on Low-Power Wide-Area Networks"</span> accepted at <span class="spBlue">MOBICOM 2020</span></li> -->
-	  <!-- <li class="liintro">Paper <span class="sp1">"Quick (and Dirty) Aggregate Queries for Low-Power WANs"</span> wins <span class="spRed">Best Paper Award</span> at <span class="spBlue">IPSN 2020</span></li> -->
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-name">Akshay<br>Gadre</h1>
+        <p class="hero-role">Assistant Professor, Electrical &amp; Computer Engineering, University of Washington. Director of the <a href="https://newtlab.ece.uw.edu/">NEWT Lab</a>.</p>
+        <p class="hero-lede">I build wireless systems that sense and connect the physical world: from power-starved IoT radios and satellites in low Earth orbit to mmWave radar, underwater acoustics, and sensors in the soil.</p>
+        <div class="hero-links">
+          <a href="https://scholar.google.com/citations?user=VTuOCIAAAAAJ">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/gadreakshay/">LinkedIn</a>
+          <a href="mailto:gadre@uw.edu">gadre@uw.edu</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://www.akshaygadre.com/myPhoto2.png" alt="Portrait of Akshay Gadre">
+      </div>
+    </div>
+  </div>
+  <div class="chirp-band" aria-hidden="true">
+    <canvas id="chirp"></canvas>
+  </div>
+</section>
 
-	</ul>
-	</div>
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+    <div class="about-grid">
+      <div class="bio">
+        <p>I am an Assistant Professor in the Department of Electrical &amp; Computer Engineering at the University of Washington, Seattle, where I direct the Networking and Emerging Wireless Technologies (NEWT) Lab. My group works across the wireless spectrum, from underwater acoustics and low-power wide-area networks to mmWave radar and laser links between satellites, with a simple bar for success: the systems have to work outside the lab, on a satellite pass, in a field, underwater, or in a moving hand.</p>
+        <p>Before UW, I received my Ph.D. in Electrical and Computer Engineering from Carnegie Mellon University, advised by Swarun Kumar. My dissertation, <i>Rethinking Low-power Wide-area Networks on Earth and Space</i>, developed new wireless physical layers and phase-synchronization architectures for city-wide LPWAN infrastructure: improving the range, battery life, and throughput of power-starved IoT clients, and adapting the same ideas for LoRa-enabled CubeSats in low Earth orbit. That work was recognized with two Best Paper Awards at ACM/IEEE IPSN and the ACM SIGBED-SIGSOFT Frank Anger Memorial Award.</p>
+        <p>I hold B.Tech and M.Tech degrees from the Indian Institute of Technology Madras. If you are a prospective Ph.D. student, the lab is recruiting, and the <a href="#contact">contact section</a> explains how to reach me so your email doesn't get lost.</p>
+      </div>
+      <div class="record">
+        <h3>Positions &amp; education</h3>
+        <ul>
+          <li><time>2022–</time><span><b>Assistant Professor</b>, ECE, University of Washington<span class="sub">Director, NEWT Lab</span></span></li>
+          <li><time>2022</time><span><b>Ph.D., ECE</b>, Carnegie Mellon University<span class="sub">Advisor: Swarun Kumar</span></span></li>
+          <li><time>2017</time><span><b>B.Tech &amp; M.Tech</b>, Indian Institute of Technology Madras</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ================= RESEARCH ================= -->
+<section class="section" id="research">
+  <div class="wrap">
+    <div class="lab-head">
+      <a class="lab-name" href="https://newtlab.ece.uw.edu/">The NEWT Lab</a>
+      <p class="lab-full">Networking and Emerging Wireless Technologies Lab &middot; University of Washington, Seattle</p>
+      <p class="lab-statement">We build wireless systems that sense and connect the physical world.</p>
+      <p class="lab-sub">Radars that read motion and material. Radios that reach satellites and soil. Acoustics that work underwater and on the body.</p>
+    </div>
+    <p class="thrusts-kicker">The lab in three thrusts. Each is a deep dive with its own live, playable demo.</p>
+    <div class="thrust-cards">
+      <a class="thrust-card tc-radar" href="https://newtlab.ece.uw.edu/radar.html">
+        <span class="tc-pre">The Internet of</span>
+        <span class="tc-name">Radar Things</span>
+        <span class="tc-desc">Commodity mmWave radars, networked into one coherent imaging instrument. Phantoms, glints, and how coordination beats both.</span>
+      </a>
+      <a class="thrust-card tc-ocean" href="https://newtlab.ece.uw.edu/underwater.html">
+        <span class="tc-pre">The Internet of</span>
+        <span class="tc-name">Underwater Things</span>
+        <span class="tc-desc">Radio drowns; sound carries. One hydrophone that hears direction, and acoustics for the unconnected ocean.</span>
+      </a>
+      <a class="thrust-card tc-touch" href="https://newtlab.ece.uw.edu/interaction.html">
+        <span class="tc-pre">The Internet of</span>
+        <span class="tc-name">Bodies</span>
+        <span class="tc-desc">Gloves that feel, gaze that prompts, wearables that know your pose. Interfaces that read the body's own language.</span>
+      </a>
+    </div>
+  </div>
+</section>
 
+<!-- ================= PUBLICATIONS ================= -->
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Publications</h2>
+      <p>The complete record. My name in bold; an asterisk marks equal contribution.</p>
+    </div>
+    <div class="pub-filter" role="group" aria-label="Filter publications by type">
+      <button type="button" data-type="all" aria-pressed="false">All papers <span>46</span></button>
+      <button type="button" data-type="conf" aria-pressed="true">Conference &amp; journal <span>24</span></button>
+      <button type="button" data-type="workshop" aria-pressed="false">Posters &amp; workshops <span>16</span></button>
+      <button type="button" data-type="invited" aria-pressed="false">Invited papers <span>2</span></button>
+      <button type="button" data-type="patent" aria-pressed="false">Patents <span>2</span></button>
+      <button type="button" data-type="thesis" aria-pressed="false">Theses <span>2</span></button>
+    </div>
 
+    <div class="pub-year">
+      <h3>2026</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://dl.acm.org/doi/10.1145/3842392">RayTrack: Accurate Outdoor LoRa Localization and Tracking using a Single Off-the-Shelf Base Station in Urban Settings</a></h4>
+          <p class="authors">Qiancheng Li, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM Transactions on Sensor Networks 2026</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3842392">DOI</a>
+              <a href="https://www.youtube.com/watch?v=LcJah7LUSL0">Video</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://yadongli.com/assets/pdf/TwinFocus.pdf">TwinFocus: Autofocus for Handheld mmWave SAR Imaging via Physical and Digital Twin References</a></h4>
+          <p class="authors">Yadong Li, Xinghua Sun, Qiancheng Li, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2026</span>
+            <span class="links">
+              <a href="https://yadongli.com/assets/pdf/TwinFocus.pdf">PDF</a>
+              <a href="https://www.youtube.com/watch?v=RMNm82wTOhg">Video</a>
+              <a href="https://github.com/leeyadong/TwinFocus">Code</a>
+              <a href="https://doi.org/10.1145/3745756.3809185">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://xsun2445.github.io/muldar/">MulDar: Unleashing the Potential of Distributed COTS mmWave Radar by Exploiting Cross-Device Channels</a></h4>
+          <p class="authors">Xinghua Sun, Qiancheng Li, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2026</span>
+            <span class="links">
+              <a href="https://xsun2445.github.io/assets/pdf/Mobisys_2026_MulDar.pdf">PDF</a>
+              <a href="https://www.youtube.com/watch?v=Dgcf0vv0X7E">Video</a>
+              <a href="https://github.com/xsun2445/MulDar">Code</a>
+              <a href="https://huggingface.co/datasets/xinghs/MulDar_Dataset">Dataset</a>
+              <a href="https://doi.org/10.1145/3745756.3809206">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3774906.3802750">AMULET: Acoustic Metastructure for Direction-of-Arrival Estimation Underwater using a Single Hydrophone</a></h4>
+          <p class="authors">Andrew Bergey, Nakul Garg, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM SenSys 2026</span>
+            <span class="award">Best Demo Award, ACM SenSys 2026</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3774906.3802750">DOI</a>
+              <a href="https://adbergey.github.io/assets/pdf/AMULET_Poster.pdf">Poster</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://xsun2445.github.io/polysight/">POLySight: Towards Practical Bi-Static Polarimetric Imaging using Commodity mmWave Radars for Material Sensing</a></h4>
+          <p class="authors">Xinghua Sun, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM SenSys 2026</span>
+            <span class="links">
+              <a href="https://xsun2445.github.io/assets/pdf/Sensys_2026_PolySight.pdf">PDF</a>
+              <a href="https://github.com/xsun2445/polysight">Code</a>
+              <a href="https://huggingface.co/datasets/xinghs/polysight">Dataset</a>
+              <a href="https://doi.org/10.1145/3774906.3800470">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3731459.3773323">WiReSens Toolkit: An Open-Source Platform Towards Accessible Wireless Tactile Sensing</a></h4>
+          <p class="authors">Devin Murphy, Junyi Zhu, <b>Akshay Gadre</b>, Antonio Torralba, Paul Pu Liang, Wojciech Matusik, Yiyue Luo</p>
+          <div class="meta">
+            <span class="venue">ACM TEI 2026</span>
+            <span class="award">Best Demo Honorable Mention, Jury's Choice, ACM TEI 2026</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3731459.3773323">DOI</a>
+              <a href="https://arxiv.org/abs/2412.00247">arXiv</a>
+              <a href="https://vimeo.com/1078431201">Video</a>
+              <a href="https://github.com/WiReSens-Toolkit">Code</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3789514.3792037">GazeSummary: Exploring Gaze as an Implicit Prompt for Personalization in Text-based LLM Tasks</a></h4>
+          <p class="authors">Jiexin Ding, Yizhuo Zhang, Xinyun Liu, Ke Chen, Yuntao Wang, Shwetak Patel, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM HotMobile 2026</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3789514.3792037">DOI</a>
+              <a href="https://arxiv.org/abs/2601.17676">arXiv</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="patent">
+          <h4>Acoustic Signature Management Engine in an Object Integrity Sensing System</h4>
+          <p class="authors">Deepak Vasisht, Ranveer Chandra, Manikanta Kotaru, Bodhi Priyantha, Nikunj Raghuvanshi, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">US Patent 12,650,409, granted June 2026</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4><a href="https://dl.acm.org/doi/abs/10.1145/3812835.3814824">Towards Practical mmWave Sensing: A Distributed and Coherent Radar Approach</a></h4>
+          <p class="authors">Xinghua Sun</p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2026, Rising Star Forum</span>
+            <span class="links">
+              <a href="https://youtu.be/oe36I1Y2GQU">Video</a>
+              <a href="https://doi.org/10.1145/3812835.3814824">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4><a href="https://dl.acm.org/doi/10.1145/3812835.3814822">Towards Mobile High-Resolution mmWave SAR Imaging via Prior-Guided Autofocus</a></h4>
+          <p class="authors">Yadong Li</p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2026, Rising Star Forum</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3812835.3814822">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Poster: TwinFocus: Autofocus for Handheld mmWave SAR Imaging via Physical and Digital Twin References</h4>
+          <p class="authors">Yadong Li, Xinghua Sun, Qiancheng Li, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2026</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Poster: Towards Practical Bi-Static Polarimetric Imaging using Commodity mmWave Radars for Material Sensing</h4>
+          <p class="authors">Xinghua Sun, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2026</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Demo: AMULET: Acoustic Metastructure for Direction-of-Arrival Estimation Underwater using a Single Hydrophone</h4>
+          <p class="authors">Andrew Bergey, Nakul Garg, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM SenSys 2026</span>
+            <span class="award">Best Demo Award</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Demo: Unleashing the Potential of Distributed COTS mmWave Radar by Exploiting Cross-Device Channels</h4>
+          <p class="authors">Xinghua Sun, Devin Murphy, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM SenSys 2026</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Demo: WiReSens Toolkit: An Open-Source Platform Towards Accessible Wireless Tactile Sensing</h4>
+          <p class="authors">Devin Murphy, Junyi Zhu, <b>Akshay Gadre</b>, Antonio Torralba, Paul Pu Liang, Wojciech Matusik, Yiyue Luo</p>
+          <div class="meta">
+            <span class="venue">ACM TEI 2026</span>
+            <span class="award">Best Demo Honorable Mention, Jury's Choice</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4><a href="https://dl.acm.org/doi/abs/10.1145/3789514.3796253">Poster: Unknown Word Detection for ESL Learners Using Gaze and Pre-trained Language Models</a></h4>
+          <p class="authors">Jiexin Ding, Bowen Zhao, Yuntao Wang, Xinyun Liu, Rui Hao, Ishan Chatterjee, Yuanchun Shi, Shwetak Patel, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM HotMobile 2026</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3789514.3796253">DOI</a>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-	</div>
+    <div class="pub-year">
+      <h3>2025</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://yadongli.com/assets/pdf/UltraPoser.pdf">UltraPoser: Pushing the Limits of IMU-based Full-Body Pose Estimation with Ultrasound Sensing on Consumer Wearables</a></h4>
+          <p class="authors">Yadong Li, Shuning Wang, Yongjian Fu, Justin Chen, Xingyu Chen, Ju Ren, Xinyu Zhang, <b>Akshay Gadre</b>, Ke Sun</p>
+          <div class="meta">
+            <span class="venue">ACM UIST 2025</span>
+            <span class="links">
+              <a href="https://yadongli.com/assets/pdf/UltraPoser.pdf">PDF</a>
+              <a href="https://youtu.be/P93l3j6mSCw">Video</a>
+              <a href="https://github.com/leeyadong/UltraPoser">Code</a>
+              <a href="https://doi.org/10.1145/3746059.3747714">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Demo: ToMoBrush: Exploring Dental Health Sensing using a Sonic Toothbrush</h4>
+          <p class="authors">Kuang Yuan, Mohamed Ibrahim, Yiwen Song, Guoxiang Deng, Robert Nerone, Suvendra Vijayan, <b>Akshay Gadre</b>, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM MobiSys 2025</span>
+            <span class="award">Best Demo Award</span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-<div id="bottomBand1">
-	<div id="1" class="option l1 t1">				<div class="optiontext">&nbsp;Home</div>	</div>
-	<div id="x2" class="option l2 t1">
+    <div class="pub-year">
+      <h3>2024</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3697253.3697272">On the Feasibility of Laser Inter-satellite Links for Low-latency High Frequency Trading</a></h4>
+          <p class="authors">Vaibhav Singh, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM LEO-NET 2024</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3697253.3697272">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3678505">ToMoBrush: Exploring Dental Health Sensing using a Sonic Toothbrush</a></h4>
+          <p class="authors">Kuang Yuan, Mohamed Ibrahim, Yiwen Song, Guoxiang Deng, Robert Nerone, Suvendra Vijayan, <b>Akshay Gadre</b>, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM UbiComp / IMWUT 2024</span>
+            <span class="award">Best Demo Award, ACM MobiSys 2025</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3678505">DOI</a>
+              <a href="https://arxiv.org/abs/2402.01933">arXiv</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3675170">Adapting LoRa Ground Stations for Low-latency Imaging and Inference from LoRa-enabled CubeSats</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Zachary Manchester, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM Transactions on Sensor Networks 2024</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3675170">DOI</a>
+              <a href="https://par.nsf.gov/servlets/purl/10529690">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Demo: Synthetic Data for Data-Driven Wireless</h4>
+          <p class="authors">Qiancheng Li, Xinghua Sun, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM AI-RAN 2024</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4><a href="https://doi.org/10.1145/3636534.3698847">Demo: “My WiFi is not working!” Augmenting Wireless Awareness in Consumers via XR</a></h4>
+          <p class="authors">Qiancheng Li, Xinghua Sun, <b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM MobiCom &amp; S3 2024</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3636534.3698847">DOI</a>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-		<div class="optiontext">&nbsp;Research</div>
-	</div>
-	<div id="3" class="option l3 t1">
+    <div class="pub-year">
+      <h3>2022</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://ieeexplore.ieee.org/document/9826084">MiLTOn: Sensing Product Integrity without Opening the Box using Non-Invasive Acoustic Vibrometry</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Deepak Vasisht, Nikunj Raghuvanshi, Bodhi Priyantha, Manikanta Kotaru, Swarun Kumar, Ranveer Chandra</p>
+          <div class="meta">
+            <span class="venue">ACM/IEEE IPSN 2022</span>
+            <span class="links">
+              <a href="https://ieeexplore.ieee.org/document/9826084">IEEE Xplore</a>
+              <a href="https://deepakv.web.illinois.edu/assets/papers/milton-ipsn2022.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Poster: Exploring Time-series Telemetry from CubeSats</h4>
+          <p class="authors">Kuang Yuan, <b>Akshay Gadre</b>, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM SenSys 2022</span>
+          </div>
+        </article>
+        <article class="pub" data-type="thesis">
+          <h4>Rethinking Low-power Wide-area Networks on Earth and Space</h4>
+          <p class="authors"><b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">Doctoral thesis, Carnegie Mellon University 2022</span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-		<div class="optiontext">&nbsp;Publications</div>
-	</div>
-	<div id="4" class="option l4 t1">
+    <div class="pub-year">
+      <h3>2021</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3412382.3458263">OwLL: Accurate LoRa Localization using the TV Whitespaces</a></h4>
+          <p class="authors">Atul Bansal, <b>Akshay Gadre</b>, Vaibhav Singh, Anthony Rowe, Bob Iannucci, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM/IEEE IPSN 2021</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3412382.3458263">DOI</a>
+              <a href="https://swarunkumar.com/papers/owll-ipsn2021.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-		<div class="optiontext">&nbsp;Awards and Funding</div>
-	</div>
-	<div id="5" class="option l5 t1">
+    <div class="pub-year">
+      <h3>2020</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3422604.3425925">Full Duplex Radios: Are We There Yet?</a></h4>
+          <p class="authors">Vaibhav Singh*, <b>Akshay Gadre</b>*, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM HotNets 2020</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3422604.3425925">DOI</a>
+              <a href="https://swarunkumar.com/papers/fdstudy-hotnets2020.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3372224.3419204">Joltik: Enabling Energy-Efficient “Future-Proof” Analytics on Low-Power Wide-Area Networks</a></h4>
+          <p class="authors">Mingran Yang, Junbo Zhang, <b>Akshay Gadre</b>, Zaoxing Liu, Swarun Kumar, Vyas Sekar</p>
+          <div class="meta">
+            <span class="venue">ACM MobiCom 2020</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3372224.3419204">DOI</a>
+              <a href="https://swarunkumar.com/papers/joltik-mobicom2020.pdf">PDF</a>
+              <a href="https://github.com/Joltik-project/Joltik">Code</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1145/3372224.3380879">Millimeter-Wave Full Duplex Radios</a></h4>
+          <p class="authors">Vaibhav Singh, Susnata Mondal, <b>Akshay Gadre</b>, Milind Srivastava, Jeyanandh Paramesh, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM MobiCom 2020</span>
+            <span class="links">
+              <a href="https://doi.org/10.1145/3372224.3380879">DOI</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://ieeexplore.ieee.org/document/9111018">Quick (and Dirty) Aggregate Queries on Low-Power WANs</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Fan Yi, Anthony Rowe, Bob Iannucci, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM/IEEE IPSN 2020</span>
+            <span class="award">Best Paper Award</span>
+            <span class="links">
+              <a href="https://ieeexplore.ieee.org/document/9111018">IEEE Xplore</a>
+              <a href="https://swarunkumar.com/papers/quail-ipsn2020.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://www.usenix.org/conference/nsdi20/presentation/gadre">Frequency Configuration for Low-Power Wide-Area Networks in a Heartbeat</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Revathy Narayanan, Anh Luong, Anthony Rowe, Bob Iannucci, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">USENIX NSDI 2020</span>
+            <span class="links">
+              <a href="https://www.usenix.org/conference/nsdi20/presentation/gadre">USENIX</a>
+              <a href="https://www.usenix.org/system/files/nsdi20-paper-gadre.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Low-Power Wide-Area Networks: Connect, Sense and Secure</h4>
+          <p class="authors"><b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">ACM/IEEE IPSN PhD Forum 2020</span>
+            <span class="award">Best Presentation Award</span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Poster: Designing a PHY-layer for Machine Learning on Low-Power Sensors</h4>
+          <p class="authors"><b>Akshay Gadre</b>, Anthony Rowe, Bob Iannucci, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">USENIX NSDI 2020</span>
+          </div>
+        </article>
+        <article class="pub" data-type="invited">
+          <h4>Designing an ML-Friendly Wireless Physical Layer for Low-Power IoT</h4>
+          <p class="authors"><b>Akshay Gadre</b>, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">IEEE WiOPT 2020, invited paper</span>
+          </div>
+        </article>
+      </div>
+    </div>
 
-		<div class="optiontext">&nbsp;Contact Me</div>
-	</div>
-</div>
+    <div class="pub-year">
+      <h3>2019</h3>
+      <div>
+        <article class="pub" data-type="workshop">
+          <h4>Poster: Wireless Network Functions in the Era of Low-Power IoT</h4>
+          <p class="authors"><b>Akshay Gadre</b>, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM MobiCom 2019</span>
+          </div>
+        </article>
+        <article class="pub" data-type="invited">
+          <h4>Towards Enabling City-Scale Internet of Things: Challenges and Opportunities</h4>
+          <p class="authors"><b>Akshay Gadre</b>, Diana Zhang, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">IEEE COMSNETS 2019, invited paper</span>
+          </div>
+        </article>
+        <article class="pub" data-type="patent">
+          <h4>Joint Decoding of Packets in Wireless Networks using Chirp Spread-Spectrum Modulation</h4>
+          <p class="authors">Adwait Dongare, Artur Balanuta, <b>Akshay Gadre</b>, Bob Iannucci, Swarun Kumar, Anh Luong, Revathy Narayanan, Anthony Rowe</p>
+          <div class="meta">
+            <span class="venue">US Patent 10,735,047</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="pub-year">
+      <h3>2018</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://ieeexplore.ieee.org/document/8422832">A Deep Learning Approach to IoT Authentication</a></h4>
+          <p class="authors">Rajshekhar Das, <b>Akshay Gadre</b>, Shanghang Zhang, Swarun Kumar, José M. F. Moura</p>
+          <div class="meta">
+            <span class="venue">IEEE ICC 2018</span>
+            <span class="links">
+              <a href="https://ieeexplore.ieee.org/document/8422832">IEEE Xplore</a>
+              <a href="https://swarunkumar.com/papers/dliot-icc2018.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://ieeexplore.ieee.org/document/8480036">Charm: Exploiting Geographical Diversity in Low-Power WANs</a></h4>
+          <p class="authors">Adwait Dongare, Revathy Narayanan, <b>Akshay Gadre</b>, Anh Luong, Artur Balanuta, Swarun Kumar, Bob Iannucci, Anthony Rowe</p>
+          <div class="meta">
+            <span class="venue">ACM/IEEE IPSN 2018</span>
+            <span class="award">Best Paper Award</span>
+            <span class="links">
+              <a href="https://ieeexplore.ieee.org/document/8480036">IEEE Xplore</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://doi.org/10.1186/s13638-018-1216-0">Centralized Approaches for Virtual Network Function Placement in SDN-enabled Networks</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Anix Anbiah, Krishna Sivalingam</p>
+          <div class="meta">
+            <span class="venue">EURASIP JWCN 2018</span>
+            <span class="links">
+              <a href="https://doi.org/10.1186/s13638-018-1216-0">DOI, open access</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="workshop">
+          <h4>Poster: Maintaining UAV Stability using Low-Power WANs</h4>
+          <p class="authors"><b>Akshay Gadre</b>, Revathy Narayanan, Swarun Kumar</p>
+          <div class="meta">
+            <span class="venue">ACM MobiCom 2018</span>
+            <span class="award">Best Poster Runner-up</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="pub-year">
+      <h3>2017</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://ieeexplore.ieee.org/document/7980660">A Customizable Agile Approach to Network Function Placement</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Anix Anbiah, Krishna Sivalingam</p>
+          <div class="meta">
+            <span class="venue">IEEE EuCNC 2017</span>
+            <span class="links">
+              <a href="https://ieeexplore.ieee.org/document/7980660">IEEE Xplore</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="thesis">
+          <h4>Centralized Approaches for Static and Dynamic Network Function Placement in SDN-enabled Networks</h4>
+          <p class="authors"><b>Akshay Gadre</b></p>
+          <div class="meta">
+            <span class="venue">Master's thesis, IIT Madras 2017</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="pub-year">
+      <h3>2016</h3>
+      <div>
+        <article class="pub" data-type="conf">
+          <h4><a href="http://lrec2016.lrec-conf.org/media/filer_public/2016/06/14/lrec2016-boa-ws.pdf">Machine Translating Code Mixed Text: Pain Points and Sweet Spots</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Rafiya Begum, Monojit Choudhury, Kalika Bali</p>
+          <div class="meta">
+            <span class="venue">WILDRE, LREC 2016</span>
+            <span class="links">
+              <a href="http://lrec2016.lrec-conf.org/media/filer_public/2016/06/14/lrec2016-boa-ws.pdf">PDF</a>
+            </span>
+          </div>
+        </article>
+        <article class="pub" data-type="conf">
+          <h4><a href="https://eudl.eu/pdf/10.4108/eai.18-5-2016.151253">Network Function Virtualization: A Primer</a></h4>
+          <p class="authors"><b>Akshay Gadre</b>, Krishna Sivalingam</p>
+          <div class="meta">
+            <span class="venue">EAI Endorsed Transactions on Future Internet 2016</span>
+            <span class="links">
+              <a href="https://eudl.eu/pdf/10.4108/eai.18-5-2016.151253">PDF</a>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================= AWARDS & FUNDING ================= -->
+<section class="section" id="awards">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Awards &amp; funding</h2>
+      <p>If you are interested in supporting or collaborating with the lab, write to <a href="mailto:gadre@uw.edu">gadre@uw.edu</a>.</p>
+    </div>
+
+    <h3 class="awards-head">Grants</h3>
+    <div class="grant-grid">
+      <article class="grant-card">
+        <div class="grant-top"><span class="venue">General Motors</span><span class="years">2026&ndash;2027</span></div>
+        <h4>SkyHaul: A Comparative Measurement Study of LEO Broadband and Direct-to-Cell Satellite Backhaul for Connected-Vehicle Applications</h4>
+        <p class="pi">PI: Akshay Gadre</p>
+      </article>
+      <article class="grant-card">
+        <div class="grant-top"><span class="venue">JCATI</span><span class="years">2026&ndash;2027</span></div>
+        <h4>mmWave Polarimetric Imaging and Interferometry for Detecting Defects in Aerospace Parts</h4>
+        <p class="pi">PI: Akshay Gadre. Joint Center for Aerospace Technology Innovation</p>
+      </article>
+      <article class="grant-card">
+        <div class="grant-top"><span class="venue">NSF IUCRC</span><span class="years">2023&ndash;2024</span></div>
+        <h4>SoilCam: Enhancing Soil Nutrient Sensors via NIR-Vis Polarimetry and RF Sensor Fusion</h4>
+        <p class="pi">PI: Akshay Gadre</p>
+      </article>
+    </div>
+
+    <h3 class="awards-head">Awards</h3>
+    <ul class="news-list">
+      <li><time>2026</time><span><b>Best Demo Award</b>, ACM SenSys 2026, for AMULET.</span></li>
+      <li><time>2026</time><span><b>Outstanding TPC Member Award</b>, ACM SenSys 2026.</span></li>
+      <li><time>2026</time><span><b>Best Demonstration Award</b>, AFRL SDR Challenge 2026, awarded to team Husky Satellite Monitor, led by my student Andrew Bergey.</span></li>
+      <li><time>2026</time><span><b>Best Demo Honorable Mention, Jury's Choice</b>, ACM TEI 2026, for the WiReSens Toolkit.</span></li>
+      <li><time>2026</time><span><b>ACM MobiSys Rising Star</b>, awarded to my students Xinghua Sun and Yadong Li.</span></li>
+      <li><time>2026</time><span><b>Best PhD Forum Paper Award</b>, ACM SenSys 2026, awarded to my student Andrew Bergey.</span></li>
+      <li><time>2025</time><span><b>Best Demo Award</b>, ACM MobiSys 2025, for ToMoBrush.</span></li>
+      <li><time>2025</time><span><b>Best Demo Award</b> (sponsored by Apple), UW ECE Research Showcase, awarded to Xinghua Sun.</span></li>
+      <li><time>2024</time><span><b>Most Engaging Presentation Award</b>, T-Mobile T-Challenge: AI for Telecommunications, for RayTrack. The team was also a top-12 finalist.</span></li>
+      <li><time>2021</time><span><b>ACM SIGBED-SIGSOFT Frank Anger Memorial Award</b>.</span></li>
+      <li><time>2020</time><span><b>CyLab Presidential Fellowship</b>, Carnegie Mellon University.</span></li>
+      <li><time>2020</time><span><b>Best Paper Award</b>, ACM/IEEE IPSN 2020, for QuAiL. <b>Best Presentation Award</b>, ACM/IEEE IPSN PhD Forum 2020.</span></li>
+      <li><time>2018</time><span><b>Best Paper Award</b>, ACM/IEEE IPSN 2018, for Charm. <b>Best Poster Runner-up</b>, ACM MobiCom 2018.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= STUDENTS ================= -->
+<section class="section" id="students">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Students</h2>
+      <p>Photos and full bios are on the <a href="https://newtlab.ece.uw.edu/">lab website</a>.</p>
+    </div>
+    <div class="students-grid">
+      <div>
+        <ul>
+          <li><b><a href="https://xsun2445.github.io/">Xinghua Sun</a></b><span class="sub">Ph.D. candidate. Distributed &amp; coherent mmWave radar. MobiSys Rising Star 2026</span></li>
+          <li><b><a href="https://yadongli.com/">Yadong Li</a></b><span class="sub">Ph.D. student. mmWave &amp; non-line-of-sight imaging, wearable sensing. MobiSys Rising Star 2026</span></li>
+          <li><b><a href="https://djx06.github.io/">Jiexin Ding</a></b><span class="sub">Ph.D. student. Multimodal sensing, gaze &amp; applied AI. Co-advised with Shwetak Patel</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><b><a href="https://qiancheng-li.github.io/">Qiancheng Li</a></b><span class="sub">Ph.D. student. Radio digital twins, LoRa localization &amp; radar systems</span></li>
+          <li><b><a href="https://adbergey.github.io/">Andrew Bergey</a></b><span class="sub">Ph.D. student. Underwater acoustics &amp; acoustic metastructures</span></li>
+          <li><b><a href="https://devin-dot-com.vercel.app/">Devin Murphy</a></b><span class="sub">Ph.D. student. Wireless tactile sensing &amp; fabrication. Co-advised with Yiyue Luo</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="students-note"><b>M.S. alumni:</b> Karen Aguilar (2025, visible-light polarimetry for soil moisture), Matthew Pana (2025, Pearl: a more reliable LoRaWAN), and Vaibhav Singh (2023, laser inter-satellite links for satellite constellations).</p>
+  </div>
+</section>
+
+<!-- ================= NEWS ================= -->
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>News</h2>
+    </div>
+    <ul class="news-list">
+      <li><time>Aug 2026</time><span><b>RayTrack</b> (accurate outdoor LoRa localization with a single off-the-shelf base station) is accepted to ACM Transactions on Sensor Networks. Congratulations, Qiancheng!</span></li>
+      <li><time>Jun 2026</time><span>Our <b>MiLTOn</b> acoustic product-integrity sensing patent is granted: US Patent 12,650,409.</span></li>
+      <li><time>Jun 2026</time><span><b>MulDar</b> and <b>TwinFocus</b> are presented at ACM MobiSys 2026 in Cambridge, UK, where I give an invited talk on the Internet of Radar Things at IoT Day.</span></li>
+      <li><time>May 2026</time><span><b>AMULET</b> wins the Best Demo Award at ACM SenSys 2026, and Andrew wins the Best PhD Forum Paper Award at SenSys. I also receive the SenSys Outstanding TPC Member Award.</span></li>
+      <li><time>Apr 2026</time><span>Team <b>Husky Satellite Monitor</b>, led by Andrew, wins the Best Demonstration Award at the AFRL SDR Challenge 2026.</span></li>
+      <li><time>Apr 2026</time><span>Xinghua and Yadong are both selected as <b>ACM MobiSys Rising Stars 2026</b>.</span></li>
+      <li><time>Mar 2026</time><span><b>WiReSens Toolkit</b> receives the Best Demo Honorable Mention, Jury's Choice, at ACM TEI 2026. Congratulations, Devin!</span></li>
+      <li><time>Feb 2026</time><span><b>GazeSummary</b> and a poster on gaze-based unknown-word detection for ESL learners appear at ACM HotMobile 2026. Congratulations, Jiexin!</span></li>
+      <li><time>Sep 2025</time><span><b>POLySight</b> is accepted to ACM SenSys 2026.</span></li>
+      <li><time>Jul 2025</time><span><b>UltraPoser</b> is accepted to ACM UIST 2025.</span></li>
+      <li><time>Jun 2025</time><span><b>ToMoBrush</b> wins the Best Demo Award at ACM MobiSys 2025. Karen and Matthew complete their M.S. theses on visible-light soil-moisture sensing and reliable LoRaWAN. Congratulations!</span></li>
+      <li><time>Mar 2025</time><span>Xinghua wins the <b>Best Demo Award</b> (sponsored by Apple) at the UW ECE Research Showcase.</span></li>
+      <li><time>Nov 2024</time><span>The lab presents the <b>RayTrack XR</b> demo and an S3 workshop paper at ACM MobiCom 2024 in Washington, D.C.</span></li>
+      <li><time>Jun 2024</time><span><b>RayTrack</b> wins the Most Engaging Presentation Award at the T-Mobile T-Challenge, presented at T-Mobile headquarters in Bonn.</span></li>
+      <li><time>Sep 2022</time><span>I join UW ECE as an Assistant Professor and found the NEWT Lab.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="pitch">
+        <p class="big">The NEWT Lab is looking for hardworking and persevering Ph.D. students who want their systems to work outside the lab.</p>
+        <p>Prospective Ph.D. students: apply to the <a href="https://www.ece.uw.edu/academics/graduate-admissions/">UW ECE graduate program</a> and mention the NEWT Lab, then send me a short email: who you are, what you have built, and which band of the spectrum above you want to live in. Current UW undergraduate and master's students interested in research are welcome to reach out any time.</p>
+        <p>For everything else (collaborations, talks, media, or industry partnerships), email is the fastest way to reach me.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Reach me</h3>
+        <a class="email" href="mailto:gadre@uw.edu">gadre@uw.edu</a>
+        <p class="addr">Prof. Akshay Gadre<br>
+        EE 430, Campus Box 352500<br>
+        Department of Electrical &amp; Computer Engineering<br>
+        University of Washington<br>
+        Seattle, WA 98195</p>
+        <div class="elsewhere">
+          <a href="https://newtlab.ece.uw.edu/">NEWT Lab</a>
+          <a href="https://scholar.google.com/citations?user=VTuOCIAAAAAJ">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/gadreakshay/">LinkedIn</a>
+          <a href="https://www.ece.uw.edu/people/akshay-gadre/">UW ECE profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span class="credo">The only color on this page is the research.</span>
+    <span>Akshay Gadre, University of Washington. Last updated September 2026.</span>
+  </div>
+</footer>
+
+<script>
+/* ---------- Active section in nav ---------- */
+(function(){
+  var links = document.querySelectorAll('.site-nav a');
+  var map = {};
+  links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){ a.classList.remove('is-active'); });
+        var link = map[e.target.id];
+        if(link) link.classList.add('is-active');
+      }
+    });
+  }, {rootMargin: '-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) observer.observe(el);
+  });
+})();
+
+/* ---------- Publication filter ---------- */
+(function(){
+  var buttons = document.querySelectorAll('.pub-filter button');
+  if(!buttons.length) return;
+  function apply(type){
+    document.querySelectorAll('.pub').forEach(function(p){
+      p.hidden = (type !== 'all' && p.dataset.type !== type);
+    });
+    document.querySelectorAll('.pub-year').forEach(function(g){
+      g.hidden = !g.querySelector('.pub:not([hidden])');
+    });
+  }
+  buttons.forEach(function(b){
+    b.addEventListener('click', function(){
+      buttons.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      apply(b.dataset.type);
+    });
+  });
+  apply('conf'); /* default: conference and journal papers */
+})();
+
+/* ---------- The chirp ----------
+   One slowly sweeping chirp: the waveform this research is built on,
+   from LoRa's chirp spread spectrum to FMCW radar. Shared visual DNA
+   with the NEWT Lab site. */
+(function(){
+  var canvas = document.getElementById('chirp');
+  if(!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var t = 0;
+
+  function resize(){
+    var dpr = window.devicePixelRatio || 1;
+    canvas.width = canvas.clientWidth * dpr;
+    canvas.height = canvas.clientHeight * dpr;
+  }
+
+  function draw(){
+    var w = canvas.width, h = canvas.height;
+    var dpr = window.devicePixelRatio || 1;
+    ctx.clearRect(0, 0, w, h);
+    ctx.strokeStyle = '#000';
+    ctx.lineJoin = 'round';
+    var traces = [
+      {alpha: 1.0, phase: 0,   width: 1.4},
+      {alpha: 0.3, phase: 1.7, width: 1.1},
+      {alpha: 0.12, phase: 3.4, width: 1.1}
+    ];
+    var f0 = 1.5, f1 = 16; /* cycles across the band: low to high, a chirp */
+    for(var i = 0; i < traces.length; i++){
+      var tr = traces[i];
+      ctx.beginPath();
+      ctx.globalAlpha = tr.alpha;
+      ctx.lineWidth = tr.width * dpr;
+      for(var x = 0; x <= w; x += 2){
+        var u = x / w;
+        var phi = 2 * Math.PI * (f0 * u + (f1 - f0) * u * u / 2);
+        var amp = h * 0.36 * Math.min(1, 12 * u * (1 - u) + 0.55); /* soft edges */
+        var y = h / 2 + Math.sin(phi - t - tr.phase) * amp;
+        if(x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function loop(){
+    t += 0.016; /* slow sweep */
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  resize();
+  window.addEventListener('resize', function(){ resize(); draw(); });
+  if(reduced){ draw(); } else { loop(); }
+})();
+</script>
 
 </body>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142128224-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-142128224-1');
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-
-$(document).ready(function(){
-  $('#mainBand').load("mainpage.txt");
-});
-$('*').on('click','#1',function(){
-	$('#mainBand').load("mainpage.txt");
-	});
-$('*').on('click','#1',function(){
-	$('#mainBand').load("mainpage.txt");
-	});
-
-$('*').on('click','#x2',function(){
-    $('#mainBand').load("research.txt");
-});
-$('*').on('click','#xx2',function(){
-    $('#mainBand').load("research.txt");
-});
-
-$('*').on('click','#x3',function(){
-    $('#mainBand').load("publications.txt");
-});
-$('*').on('click','#xx3',function(){
-  $('#mainBand').load("publications.txt");
-});
-$('*').on('click','#3',function(){
-	$('#mainBand').load("publications.txt");
-});
-
-$('*').on('click','#conf',function(){
-	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
-  $(".paper-conf").show();
-});
-
-$('*').on('click','#allpapers',function(){
-	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
-  $(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").show();
-});
-
-$('*').on('click','#workshop',function(){
-	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
-  $(".paper-workshop").show();
-});
-
-$('*').on('click','#invited',function(){
-	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
-  $(".paper-invited").show();
-});
-$('*').on('click','#thesis',function(){
-	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
-  $(".paper-thesis").show();
-});
-$('*').on('click','#patents',function(){
-	$(".paper-conf, .paper-workshop, .paper-invited, .paper-thesis, .paper-patent").hide();
-  $(".paper-patent").show();
-});
-
-$('*').on('click','#xx4',function(){
-    $('#mainBand').load("awards.txt");
-});
-$('*').on('click','#4',function(){
-    $('#mainBand').load("awards.txt");
-});
-$('*').on('click','#7',function(){
-	window.location = './CV_Website.pdf';
-});
-$('*').on('click','#xx5',function(){
-	window.location = './CV_Website.pdf';
-});
-
-$('*').on('click','#xxRS',function(){
-	window.location = './Research_Statement_Website.pdf';
-});
-$('*').on('click','#xxTS',function(){
-	window.location = './Teaching_Statement_Website.pdf';
-});
-$('*').on('click','#xxDS',function(){
-	window.location = './Diversity_Statement_Website.pdf';
-});
-$('*').on('click','#xxCV',function(){
-	window.location = './CV_Website.pdf';
-});
-$('*').on('click','#x8',function(){
-    $('#mainBand').html('<div class="mainTopBand1"><center> <span id="x2x" class="optiontype">Overview</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="7" class="optiontype">Resume</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="x8" class="optiontype">Awards</span></center> </div> <div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
-});
-$('*').on('click','#9',function(){
-    $('#mainBand').html('<div class="textcenter1">		<div>Sorry, This page is still under construction</div>	</div>').show();
-});
-$('*').on('click','#5',function(){
-    $('#mainBand').html('<div class="textcenter2">I am always interested to discuss new research problems in wireless communications, computer networks and in computer science in generally. Feel free to contact me for discussing such problems. Also feel free to challenge me for a game of Chess or Age of Empires 2, I would probably reply at a suitable time for the match up :D </div><div class="textcenter0">		<div>You can reach out to me at:</div><div>E-mail: <a href="mailto:gadre@uw.edu">gadre@uw.edu</a></div><div>LinkedIn: <a href="https://www.linkedin.com/in/gadreakshay">Akshay Gadre</a></div><div>During working hours: EE 430, 4th floor, Paul Allen Center, 185 E Stevens Way NE, Seattle, WA-98195</div>	</div>').show();
-});
-
-</script>
 </html>
